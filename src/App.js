@@ -1,14 +1,18 @@
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { useHistory } from 'react-router';
+import Home from './components/Home'
+import Login from './components/Login.js'
+import Signup from './components/Signup'
+
 function App() {
+  const history = useHistory();
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-        Hello Habitual
-        </p>
-        
-  
-      </header>
+    <div className='App'>
+      <Router>
+        <Route exact path='/login' component={Login} history={history}/>
+        <Route exact path='/signup' component={Signup} history={history}/>
+        <Route exact path="/" component={Home} history={history}/>
+      </Router>
     </div>
   );
 }
