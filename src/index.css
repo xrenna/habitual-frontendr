@@ -67,14 +67,14 @@ body {
   border-radius: 2rem;
   border: none;
   padding: 1rem 1.5rem;
-  background-color: #fd8500;
+  background-color: #ffb703;
   color: #333;
   outline: none;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem; }
   .btn:hover {
-    background-color: #ffb703;
+    background-color: #fd8500;
     color: #333;
     box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.4);
     transform: translateY(-2px); }

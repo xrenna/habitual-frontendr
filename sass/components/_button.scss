@@ -2,7 +2,7 @@
     border-radius: 2rem;
     border: none;
     padding: 1rem 1.5rem;
-    background-color: $color-secondary-bold;
+    background-color: $color-secondary;
     color: $color-gray-dark-2;
     outline: none;
     cursor: pointer;
@@ -10,7 +10,7 @@
     font-size: 2rem;
 
     &:hover {
-        background-color: $color-secondary;
+        background-color: $color-secondary-bold;
         color: $color-gray-dark-2;
         box-shadow: 0 1rem 2rem rgba($color-black, .40);
         transform: translateY(-2px);
