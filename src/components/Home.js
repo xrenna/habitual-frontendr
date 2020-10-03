@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 
 export default class Home extends Component {
+
+    onClick = (url) => {
+        this.props.history.push(url)
+    }
+
     render() {
         return (
             <header className="header">
@@ -12,7 +17,8 @@ export default class Home extends Component {
                 </div>
                 
                 <div className='header__btn'>
-                    <button className="btn">Sign up Now</button>
+                    <button onClick={() => this.onClick('/signup')} className="btn">Sign up Now</button>
+                    <button onClick={() => this.onClick('/login')} className="btn btn--small">Login</button>
                 </div>
             </header>
         )
