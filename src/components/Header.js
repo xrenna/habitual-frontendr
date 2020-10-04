@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { getCurrentUser } from '../actions/currentUser'
+import { connect } from 'react-redux'
+import Logout from './Logout'
 
-export default class Home extends Component {
+class Header extends Component {
 
     onClick = (url) => {
         this.props.history.push(url)
@@ -8,6 +11,7 @@ export default class Home extends Component {
 
     render() {
         return (
+            <>
             <header className="header">
                 <div className='header__text-box'>
                     <h1 className='heading-primary'>
@@ -21,6 +25,17 @@ export default class Home extends Component {
                     <button onClick={() => this.onClick('/login')} className="btn btn--small">Login</button>
                 </div>
             </header>
+            { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p><Logout/></> : null}
+            </>
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        currentUser: state.currentUser, 
+        loggedIn: !!state.currentUser
+    }
+}
+
+export default connect(mapStateToProps, { getCurrentUser })(Header)
