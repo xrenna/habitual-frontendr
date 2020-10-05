@@ -9,13 +9,26 @@ class Dashboard extends Component {
         this.props.getCurrentUser()
     }
 
+    renderGoals = () => {
+        return this.props.currentUser && this.props.currentUser.goals.map(goal => <GoalCard key={goal.id} {...goal} />)
+      }
+
     render() {
+        console.log(this.props.currentUser && this.props.currentUser.goals)
         return (
             <div>
-                <GoalCard />
+                <h2> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h2>
+                {this.renderGoals()}
             </div>
         )
     }
 }
 
-export default connect(null, { getCurrentUser })(Dashboard)
+const mapStateToProps = state => {
+    return {
+        currentUser: state.currentUser, 
+        loggedIn: !!state.currentUser
+    }
+}
+
+export default connect(mapStateToProps, { getCurrentUser })(Dashboard)
