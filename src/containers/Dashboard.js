@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GoalCard from '../components/GoalCard'
+import Logout from '../components/Logout'
 import { getCurrentUser } from '../actions/currentUser'
 import { connect } from 'react-redux'
 
@@ -10,16 +11,19 @@ class Dashboard extends Component {
     }
 
     renderGoals = () => {
-        return this.props.currentUser && this.props.currentUser.goals.map(goal => <GoalCard key={goal.id} {...goal} />)
-      }
+        return this.props.currentUser && this.props.currentUser.goals.map(goal => <GoalCard key={goal.id} {...goal}  />)
+    }
 
     render() {
-        console.log(this.props.currentUser && this.props.currentUser.goals)
+        
         return (
-            <div>
-                <h2> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h2>
-                {this.renderGoals()}
-            </div>
+            <>
+                <div>
+                    <h2> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h2>
+                    {this.renderGoals()}
+                </div>
+                { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p><Logout/></> : null}
+            </>
         )
     }
 }

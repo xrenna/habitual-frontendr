@@ -12,6 +12,10 @@ class Header extends Component {
     render() {
         return (
             <>
+            <nav>
+            <button></button>
+            { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p><Logout/></> : null}
+            </nav>
             <header className="header">
                 <div className='header__text-box'>
                     <h1 className='heading-primary'>
@@ -25,7 +29,7 @@ class Header extends Component {
                     <button onClick={() => this.onClick('/login')} className="btn btn--small">Login</button>
                 </div>
             </header>
-            { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p><Logout/></> : null}
+            
             </>
         )
     }
