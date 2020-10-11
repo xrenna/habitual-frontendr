@@ -1,20 +1,29 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import { getCurrentUser } from '../actions/currentUser'
+import { connect } from 'react-redux'
 import Logout from '../components/Logout'
 
 
-export default class NavBar extends Component {
+class NavBar extends Component {
 
-  onClick = (url) => {
-    this.props.history.push(url)
-}
+  
+
   render() {
     return (
-      <nav>
-        <p>Logged in as {this.props.currentUser.username}</p>
-        <NavLink to="/dashboard" onClick={() => this.onClick('/dashboard')}>Dashboard</NavLink>
+      <div>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
         <Logout />
-      </nav>
+      </div>
     )
   }
 }
+const mapStateToProps = state => {
+    return({
+        loggedIn: !!state.currentUser,
+        currentUser: state.currentUser
+    })
+  }
+  
+export default connect(mapStateToProps, { getCurrentUser })(NavBar)
