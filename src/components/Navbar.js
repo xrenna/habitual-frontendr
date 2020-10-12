@@ -11,11 +11,16 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/dashboard">Dashboard</NavLink>
-        <Logout />
-      </div>
+      <nav className='nav'>
+        {this.props.loggedIn ? 
+            <>
+            <NavLink className='nav__link' to="/">Home</NavLink>
+            <NavLink className='nav__link' to="/dashboard">Dashboard</NavLink>
+            <Logout /> 
+            </>:
+            null
+        }
+      </nav>
     )
   }
 }

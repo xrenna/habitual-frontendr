@@ -14,7 +14,6 @@ function App() {
     <div className='App'>
       
       <Router>
-      <div>
       <NavBar />
         <Switch>
           <Route exact path='/login' component={Login} history={history}/>
@@ -22,7 +21,6 @@ function App() {
           <Route exact path="/" component={Home} history={history}/>
           <Route exact path="/Dashboard" component={Dashboard} history={history}/>
         </Switch>
-      </div>
       </Router>
     </div>
   );

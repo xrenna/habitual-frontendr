@@ -1,0 +1,10 @@
+.nav {
+    display: flex;   
+    flex-direction: column; 
+    float: left;
+    padding: 4rem; 
+    background-color: $color-primary-light-2;
+    justify-content: space-around;
+    align-content: flex-start;
+    height: 90vh;
+}

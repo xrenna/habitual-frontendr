@@ -86,12 +86,23 @@ body {
     font-size: 1rem;
     border-radius: 1rem; }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding: 4rem;
+  background-color: #8ecae6;
+  justify-content: space-around;
+  align-content: flex-start;
+  height: 90vh; }
+
 .header {
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(88, 180, 209, 0.8), rgba(2, 48, 71, 0.8)), url(./imgs/header.jpg);
   background-size: cover;
   background-position: top;
-  position: relative; }
+  position: relative;
+  display: flex; }
   .header__text-box {
     position: absolute;
     top: 40%;
