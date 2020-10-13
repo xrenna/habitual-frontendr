@@ -87,14 +87,27 @@ body {
     border-radius: 1rem; }
 
 .nav {
+  flex: 0 0 18%;
+  float: left;
   display: flex;
   flex-direction: column;
-  float: left;
-  padding: 4rem;
+  justify-content: space-between;
   background-color: #8ecae6;
-  justify-content: space-around;
-  align-content: flex-start;
-  height: 90vh; }
+  align-content: center;
+  height: 90vh;
+  padding: 4rem; }
+  .nav__link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+  .nav__link {
+    margin-bottom: 3rem; }
+  .nav__logout-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 40rem; }
 
 .header {
   height: 90vh;
