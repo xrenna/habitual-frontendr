@@ -8,8 +8,15 @@ function GoalCard (props) {
 
     return (
         <>
-            <p>{props.name}</p>
-            <li>{renderHabits()}</li>
+            <div className='card__side card__side--front'>
+                <h3 className='card__heading'>{props.name}</h3>
+            </div>
+            <div className='card__side card__side--back'>
+                <h5 className='card'>{props.name}'s Habits</h5>
+                <ul className='card__habits'>
+                    <li className='card__habit'>{renderHabits()}</li>
+                </ul>
+            </div>
         </>
     );
   }

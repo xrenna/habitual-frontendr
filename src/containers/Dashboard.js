@@ -10,16 +10,16 @@ class Dashboard extends Component {
     }
 
     renderGoals = () => {
-        return this.props.currentUser && this.props.currentUser.goals.map(goal => <GoalCard key={goal.id} {...goal}  />)
+        return this.props.currentUser && this.props.currentUser.goals.map(goal => <div className='card'><GoalCard key={goal.id} {...goal}  /></div>)
     }
 
     render() {
         
         return (
             <>
-                <div>
-                    <h2> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h2>
-                    {this.renderGoals()}
+                <div className='dashboard'>
+                    <h1> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h1>
+                        {this.renderGoals()}
                 </div>
             </>
         )
