@@ -1,9 +1,9 @@
 function HabitList (props) {
     return (
-        <>
-            <p>{props.name}</p>
-            <p>{props.progress}</p>
-        </>
+        <span>
+            <span>{props.name}</span> - progress:
+            <span>{props.progress}</span>
+        </span>
     );
   }
   

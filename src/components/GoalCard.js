@@ -12,9 +12,9 @@ function GoalCard (props) {
                 <h3 className='card__heading'>{props.name}</h3>
             </div>
             <div className='card__side card__side--back'>
-                <h5 className='card'>{props.name}'s Habits</h5>
-                <ul className='card__habits'>
-                    <li className='card__habit'>{renderHabits()}</li>
+                <h5 className='card__details'>{props.name}'s Habits</h5>
+                <ul>
+                    <li>{renderHabits()}</li>
                 </ul>
             </div>
         </>
