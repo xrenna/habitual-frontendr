@@ -3,6 +3,7 @@ body {
     font-weight: 500;
     line-height: 1.7;
     color: $color-gray-dark-2; 
+}
 
     .heading-primary {
         color: $color-white; 
@@ -32,4 +33,4 @@ body {
             animation: slideInBlurredRight 1.2s ease-out;
         }
     }
-}
+

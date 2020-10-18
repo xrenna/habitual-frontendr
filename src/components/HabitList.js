@@ -1,7 +1,7 @@
 function HabitList (props) {
     return (
         <>
-            {props.name}
+            <p>{props.name}</p>
             <p>{props.progress}</p>
         </>
     );
