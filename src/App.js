@@ -6,6 +6,7 @@ import Dashboard from './containers/Dashboard'
 import Login from './components/Login.js'
 import Signup from './components/Signup'
 import NavBar from './components/Navbar';
+import Tracker from './containers/Tracker';
 
 function App() {
   const history = useHistory();
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/signup' component={Signup} history={history}/>
           <Route exact path="/" component={Home} history={history}/>
           <Route exact path="/Dashboard" component={Dashboard} history={history}/>
+          <Route exact path="/Tracker" component={Tracker} history={history}/>
         </Switch>
       </Router>
     </div>
