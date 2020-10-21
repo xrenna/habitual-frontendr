@@ -10,7 +10,6 @@ import Tracker from './containers/Tracker';
 
 function App() {
   const history = useHistory();
-  console.log(history)
   return (
     <div className='App'>
       

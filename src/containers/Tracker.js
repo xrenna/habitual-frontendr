@@ -10,11 +10,16 @@ class Tracker extends Component {
         this.props.getCurrentUser()
     }
 
+    renderHabits = () => {
+        return this.props.currentUser && this.props.currentUser.goals.map(goal => <section className='habits-container' key={goal.id}><Habits {...goal} /></section>)
+    }
+    
+
     render() {
         return (
             <div className = 'tracker-content'>
                 <nav className = 'sidebar--goals'><GoalsSidebar goals ={this.props.currentUser && this.props.currentUser.goals}/></nav>
-                <Habits />
+                {this.renderHabits()}
             </div>
         )
     }

@@ -1,10 +1,14 @@
-
+import Goals from '../components/Goals'
 
  function GoalsSidebar (props) {
-        console.log(props)
+        
+        const renderGoals = () => {
+            return props.goals && props.goals.map(goal => <li className='side-nav__item' key={goal.id}><Goals {...goal}/></li>)
+        }
+
         return (
             <ul className = 'side-nav'>
-                <li className='side-nav__item'>I am a goalSidebar</li>
+                {renderGoals()}
             </ul>
         )
    
