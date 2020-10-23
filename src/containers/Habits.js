@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
+import Habit from '../components/Habit'
 
-export default class Habits extends Component {
-    render() {
-        return (
-            <div>
-                I am the Habit Container. I contain Habits. 
-            </div>
-        )
+function Habits (props) {
+
+    const renderHabits = () => {
+        return props.habits && props.habits.map(habit => <Habit key={habit.id} {...habit}/>)
     }
-}
+
+    console.log(props.habits)
+
+    return (
+        <>
+            <div >
+               {renderHabits()}
+            </div>
+        </>
+    );
+  }
+  
+  export default Habits;
