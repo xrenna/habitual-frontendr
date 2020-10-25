@@ -1,12 +1,16 @@
 function Habit (props) {
-
+    
     return (
         <>
+       { props.habits && props.habits.map(habit => 
+            <div key={habit.id}>
             <div className='habits-card__content' >
-               <p>{props.name}</p>
-               <p>Frequency: {props.frequency}</p>
-               <p>Progress: {props.progress}</p>
+               <p>{habit.name}</p>
+               <p>Frequency: {habit.frequency}</p>
+               <p>Progress: {habit.progress}</p>
             </div>
+            </div>)
+       }
         </>
     );
   }
