@@ -124,14 +124,31 @@ body {
   .card:hover .card__side--back {
     transform: rotateY(0); }
 
-.sidebar--goals {
-  flex: 0 0 18%;
+.sidebar {
+  flex: 0 0 23%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: #126782;
+  padding: 1rem; }
+  .sidebar--goals {
+    color: #eee; }
+
+.side-nav {
+  font-size: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .side-nav__item {
+    margin-bottom: 3rem; }
 
 .habits-container {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eee; }
 
 .header {
   height: 90vh;

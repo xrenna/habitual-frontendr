@@ -1,7 +1,15 @@
-.sidebar--goals {
-    flex: 0 0 18%;
+.sidebar{
+    flex: 0 0 23%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: $color-primary-dark-2;
+    padding: 1rem; 
+    
+
+    &--goals {
+        color: $color-gray-light-2;
+        
+    }
 }

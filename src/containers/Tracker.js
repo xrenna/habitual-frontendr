@@ -36,7 +36,7 @@ class Tracker extends Component {
     render() {
         return (
             <div className = 'tracker-content'>
-                <nav className = 'sidebar--goals'><GoalsSidebar onClick={this.onClick} goals ={this.props.currentUser && this.props.currentUser.goals}/></nav>
+                <nav className = 'sidebar sidebar--goals'><GoalsSidebar onClick={this.onClick} goals ={this.props.currentUser && this.props.currentUser.goals}/></nav>
                 {this.state.showHabit ? <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : null}
             </div>
         )
