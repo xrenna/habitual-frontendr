@@ -1,6 +1,7 @@
 .sidebar{
     flex: 0 0 23%;
-
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
