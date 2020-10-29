@@ -37,7 +37,14 @@ class Tracker extends Component {
         return (
             <div className = 'tracker-content'>
                 <nav className = 'sidebar sidebar--goals'><GoalsSidebar onClick={this.onClick} goals ={this.props.currentUser && this.props.currentUser.goals}/></nav>
-                {this.state.showHabit ? <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : null}
+                {this.state.showHabit ? 
+                <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : 
+                <div className='habits-container'>
+                    <div className='habits-info'>
+                        <h3>Welcome to your Habit Tracker, {this.props.currentUser.username}</h3>
+                        <p>Click on your goals on the left side of the page to view your habits. Feel free to add new goals and habits here.</p>
+                    </div>
+                </div>}
             </div>
         )
     }
