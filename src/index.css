@@ -144,7 +144,8 @@ body {
   align-items: flex-start; }
   .side-nav__item {
     margin-bottom: 3rem;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 2px; }
     .side-nav__item:hover {
       background-color: #58B4d1;
       padding: .5rem;
