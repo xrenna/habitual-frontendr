@@ -4,21 +4,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 
     &__item {
         margin-bottom: 3rem;
         cursor: pointer;
         border-radius: 2px;
+        background-image: linear-gradient(to right, $color-gray-light-1, $color-gray-light-2);
+        -webkit-background-clip: text;
+        color: transparent;
 
         &:hover {
-            background-color: $color-primary;
-            padding: .5rem;
-            box-shadow: 0 1rem 2rem rgba($color-black, .40);
-            transform: translateY(-2px);
+            transform: translateY(-2px) scale(1);
+            text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
         }
 
         &:active {
-            box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
+            text-shadow: 0 1rem 1rem rgba($color-black, 0.25);
             transform: translateY(0);
         }
     }
