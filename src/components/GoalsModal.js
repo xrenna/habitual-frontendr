@@ -7,11 +7,11 @@ export default function GoalsModal(props){
     return (
         <div id="myModal" className="modal" style={{ display }}>
             <div className="modal-content">
-                <span onClick={toggle} className="close">&times;</span>
-                <form onSubmit={onSubmit}>
+                <span onClick={props.toggle} className="close">&times;</span>
+                <form onSubmit={props.onSubmit}>
                     <label>
-                    Image URL:
-                    <input type="text" name="image"  onChange={onChange} value={image}/>
+                    Goal Name: 
+                    <input type="text" name="name"  onChange={props.onChange} value={props.name}/>
                     </label>
                 </form>
             </div>

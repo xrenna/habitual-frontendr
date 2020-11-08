@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
 import GoalsSidebar from './GoalsSidebar'
 import Habit from '../components/Habit'
+import GoalsModal from '../components/GoalsModal'
 import { getCurrentUser } from '../actions/currentUser'
 import { connect } from 'react-redux'
 
 class Tracker extends Component {
     state = {
         showHabit: false,
-        id: null 
+        id: null,  
+        modal: false,
+        form: {
+            name: ''
+        } 
     }
 
     componentDidMount(){
@@ -31,10 +36,35 @@ class Tracker extends Component {
             id: id 
           });
     }
+
+    toggleModal = () => this.setState({modal: !this.state.modal})
     
+    onChange = (event) => {
+        const target = event.target;
+        const name = target.name;
+        this.setState({form: 
+            {
+                ...this.state.form, 
+                name: name
+            }
+        })
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault()
+        this.props.addGoal(this.state.form)
+       
+        this.setState({
+          modal: false,
+          form: {
+            name: ''
+          }
+        })
+      }
 
     render() {
         return (
+            <>
             <div className = 'tracker-content'>
                 <nav className = 'sidebar sidebar--goals'><GoalsSidebar onClick={this.onClick} goals ={this.props.currentUser && this.props.currentUser.goals}/></nav>
                 {this.state.showHabit ? 
@@ -46,6 +76,8 @@ class Tracker extends Component {
                     </div>
                 </div>}
             </div>
+            <GoalsModal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} onChange={this.onChange} onSubmit={this.onSubmit}/>
+            </>
         )
     }
 }
