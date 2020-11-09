@@ -3,6 +3,7 @@ import GoalsSidebar from './GoalsSidebar'
 import Habit from '../components/Habit'
 import GoalsModal from '../components/GoalsModal'
 import { getCurrentUser } from '../actions/currentUser'
+import { addGoal } from '../actions/goals'
 import { connect } from 'react-redux'
 
 class Tracker extends Component {
@@ -40,13 +41,14 @@ class Tracker extends Component {
     toggleModal = () => this.setState({modal: !this.state.modal})
     
     onChange = (event) => {
-        const target = event.target;
-        const name = target.name;
-        this.setState({form: 
-            {
+        const { name, value } = event.target
+        console.log(value)
+        this.setState({
+            form: {
                 ...this.state.form, 
-                name: name
+                [name]: value
             }
+            
         })
     }
 
@@ -62,11 +64,22 @@ class Tracker extends Component {
         })
       }
 
+      openNewGoalModal = () => this.setState({
+          modal: true, 
+          form: {
+              name: ''
+          }
+      })
+
     render() {
         return (
             <>
             <div className = 'tracker-content'>
-                <nav className = 'sidebar sidebar--goals'><GoalsSidebar onClick={this.onClick} goals ={this.props.currentUser && this.props.currentUser.goals}/></nav>
+                <nav className = 'sidebar sidebar--goals'>
+                    <GoalsSidebar openNewGoalModal={this.openNewGoalModal} 
+                                  onClick={this.onClick} 
+                                  goals ={this.props.currentUser && this.props.currentUser.goals}/>
+                </nav>
                 {this.state.showHabit ? 
                 <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : 
                 <div className='habits-container'>
@@ -89,5 +102,5 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getCurrentUser })(Tracker)
+export default connect(mapStateToProps, { getCurrentUser, addGoal })(Tracker)
 

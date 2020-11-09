@@ -13,6 +13,7 @@ export default function GoalsModal(props){
                     Goal Name: 
                     <input type="text" name="name"  onChange={props.onChange} value={props.name}/>
                     </label>
+                    <input type="submit" value="Submit" />
                 </form>
             </div>
         </div> 

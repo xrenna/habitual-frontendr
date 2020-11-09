@@ -7,9 +7,12 @@ import Goals from '../components/Goals'
         }
 
         return (
+            <>
             <ul className = 'side-nav'>
                 {renderGoals()}
             </ul>
+            <button onClick={props.openNewGoalModal}>+</button>
+            </>
         )
    
 }
