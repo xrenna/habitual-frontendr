@@ -91,21 +91,20 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-left: 3rem;
   align-content: center; }
 
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  position: relative;
-  flex: 0 1 50%; }
+  flex: 0 1 18%;
+  transform-style: preserve-3d;
+  height: 25rem;
+  margin-top: 3rem; }
   .card__side {
-    height: 10rem;
+    height: inherit;
     transition: all .8s ease;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
+    width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;

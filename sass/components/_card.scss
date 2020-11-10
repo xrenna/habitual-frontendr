@@ -2,7 +2,6 @@
     display: flex; 
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: 3rem;
     align-content: center;
 }
 
@@ -11,17 +10,19 @@
     // FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;
-    position: relative;
-    flex: 0 1 50%;
+    flex: 0 1 18%;
+    transform-style:preserve-3d;
+    height: 25rem;
+    margin-top: 3rem;
     
     
     &__side {
-        height: 10rem;
+        height: inherit;
         transition: all .8s ease;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 25%;
+        // top: 0;
+        // left: 0;
+        width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
@@ -34,6 +35,7 @@
 
         &--front {
             background-color: $color-white;
+            
         }
 
         &--back {
@@ -43,7 +45,7 @@
   
 
     &:hover &__side--front {
-        transform: rotateY(-180deg);
+        transform: rotateY(-180deg); 
     }
 
     &:hover &__side--back {
