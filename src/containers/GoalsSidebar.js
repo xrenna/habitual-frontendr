@@ -1,9 +1,13 @@
 import Goals from '../components/Goals'
 
  function GoalsSidebar (props) {
-        
         const renderGoals = () => {
-            return props.goals && props.goals.map(goal => <li className='side-nav__item' onClick={() => props.onClick(goal.id)} key={goal.id}><Goals {...goal}/></li>)
+            return props.goals && props.goals.map(goal => 
+                <li className='side-nav__item' 
+                onClick={() => props.onClick(goal.id)} key={goal.id}>
+                <Goals {...goal}/>
+                <span><button onClick={() => props.populateForm(goal)}>Edit</button></span>
+                </li>)
         }
 
         return (

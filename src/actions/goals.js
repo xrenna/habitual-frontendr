@@ -35,3 +35,31 @@ export function addGoal(name) {
           });
         }
 }
+
+export function editGoal(goal) {
+  return dispatch => {
+    return fetch(`${URL}/${goal.id}`, {
+      credentials: "include",
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(goal),
+    })
+    .then(response => response.json())
+    .then(goal => {
+      if (goal.error) {
+        alert(goal.error)
+      } else {
+        dispatch({
+          type: EDIT_GOAL, 
+          goal
+        })
+        dispatch(getCurrentUser())
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+}

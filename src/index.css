@@ -228,7 +228,7 @@ body {
 
 .dashboard {
   background-color: #eee;
-  height: 90vh; }
+  min-height: 90vh; }
 
 .tracker-content {
   display: flex; }
