@@ -10,7 +10,7 @@ class Dashboard extends Component {
     }
 
     renderGoals = () => {
-        return this.props.currentUser && this.props.currentUser.goals.map(goal => <div className='card'><GoalCard key={goal.id} {...goal}  /></div>)
+        return this.props.currentUser && this.props.currentUser.goals.map(goal => <div className='card' key={goal.id}><GoalCard {...goal}  /></div>)
     }
 
     render() {

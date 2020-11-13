@@ -63,3 +63,20 @@ export function editGoal(goal) {
     });
   }
 }
+
+export function deleteSighting(goalId) {
+  return (dispatch) => {
+    return  fetch(`${URL}/${goalId}`, {
+      credentials: "include",
+      method: 'DELETE',
+    })
+    .then(resp => resp.json())
+    .then(() => {
+      dispatch({
+      type: DELETE_GOAL,
+      goalId
+      })
+      dispatch(getCurrentUser())
+    })
+  }
+}
