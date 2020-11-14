@@ -4,9 +4,9 @@ import { deleteGoal } from '../actions/goals'
 
 
  function GoalsSidebar (props) {
-
-    const deleteGoal = () => {
-        props.deleteGoal(props.id)
+    console.log(props)
+    const deleteGoal = (goal) => {
+        props.deleteGoal(goal.id)
       }
 
         const renderGoals = () => {
@@ -15,7 +15,7 @@ import { deleteGoal } from '../actions/goals'
                 onClick={() => props.onClick(goal.id)} key={goal.id}>
                 <Goals {...goal}/>
                 <span><button onClick={() => props.populateForm(goal)}>Edit</button></span>
-                <span><button onClick={deleteGoal}>Delete</button></span>
+                <span><button onClick={() => deleteGoal(goal)}>Delete</button></span>
                 </li>)
         }
 
