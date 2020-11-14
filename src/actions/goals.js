@@ -64,7 +64,7 @@ export function editGoal(goal) {
   }
 }
 
-export function deleteSighting(goalId) {
+export function deleteGoal(goalId) {
   return (dispatch) => {
     return  fetch(`${URL}/${goalId}`, {
       credentials: "include",

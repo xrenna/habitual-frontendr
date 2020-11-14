@@ -1,12 +1,21 @@
 import Goals from '../components/Goals'
+import { connect } from 'react-redux'
+import { deleteGoal } from '../actions/goals'
+
 
  function GoalsSidebar (props) {
+
+    const deleteGoal = () => {
+        props.deleteGoal(props.id)
+      }
+
         const renderGoals = () => {
             return props.goals && props.goals.map(goal => 
                 <li className='side-nav__item' 
                 onClick={() => props.onClick(goal.id)} key={goal.id}>
                 <Goals {...goal}/>
                 <span><button onClick={() => props.populateForm(goal)}>Edit</button></span>
+                <span><button onClick={deleteGoal}>Delete</button></span>
                 </li>)
         }
 
@@ -21,4 +30,4 @@ import Goals from '../components/Goals'
    
 }
 
-export default GoalsSidebar
+export default connect(null, { deleteGoal })(GoalsSidebar);
