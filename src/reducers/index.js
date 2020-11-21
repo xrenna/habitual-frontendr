@@ -1,5 +1,5 @@
 import { currentUserReducer } from './currentUser'
-import {goalsReducer} from './goals'
+import { goalsReducer } from './goals'
 import { habitsReducer } from './habits'
 import { combineReducers } from 'redux'
 
