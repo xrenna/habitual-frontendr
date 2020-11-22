@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import GoalsSidebar from './GoalsSidebar'
 import Habit from '../components/Habit'
 import GoalsModal from '../components/GoalsModal'
+import HabitsModal from '../components/HabitsModal'
 import { getCurrentUser } from '../actions/currentUser'
 import { addGoal, editGoal } from '../actions/goals'
+import { addHabit, editHabit } from '../actions/habits'
 import { connect } from 'react-redux'
 
 class Tracker extends Component {
@@ -14,33 +16,23 @@ class Tracker extends Component {
         form: {
             id: null,
             name: ''
-        } 
+        } ,
+
+        habitForm: {
+            id: null, 
+            name: '',
+            frequency: ''
+        }
     }
 
     componentDidMount(){
         this.props.getCurrentUser()
     }
 
-    renderHabits = (id) => {
-        const habitObj = this.props.currentUser && this.props.currentUser.goals.filter(goal => id === goal.id) 
-        const habit = habitObj.map(habit => 
-                                    <section className='habits-card' key={habit.id}>
-                                        <Habit {...habit} />
-                                    </section> )    
-
-        return habit; 
-        
-    }
-
-    onClick = (id) => {
-        this.setState({
-            showHabit: true,
-            id: id 
-          });
-    }
-
     toggleModal = () => this.setState({modal: !this.state.modal})
     
+    //GOAL FORM 
+
     onChange = (event) => {
         const { name, value } = event.target
         this.setState({
@@ -68,6 +60,7 @@ class Tracker extends Component {
           }
         })
       }
+    
 
       openNewGoalModal = () => this.setState({
           modal: true, 
@@ -84,6 +77,76 @@ class Tracker extends Component {
           }
       })
 
+      // HABITS
+
+     renderHabits = (id) => {
+        const habitObj = this.props.currentUser && this.props.currentUser.goals.filter(goal => id === goal.id) 
+        const habit = habitObj.map(habit => 
+                                    <section className='habits-card' key={habit.id}>
+                                        <Habit {...habit}
+                                        openNewHabitModal={this.openNewHabitModal} 
+                                        populateHabitForm={this.populateHabitForm}
+                                        />
+                                    </section> )    
+
+        return habit; 
+        
+    }
+
+    onClick = (id) => {
+        this.setState({
+            showHabit: true,
+            id: id 
+          });
+    }
+
+      habitChange = (event) => {
+        const { name, value } = event.target
+        this.setState({
+            habitForm: {
+                ...this.state.habitForm, 
+                [name]: value
+            }
+            
+        })}
+
+        habitSubmit = (e) => {
+            e.preventDefault()
+            if (this.state.habitForm.id) {
+                this.props.editHabit(this.state.habitForm)
+              } else {
+                this.props.addHabit(this.state.habitForm)
+              }
+           
+            this.setState({
+              modal: false,
+              habitForm: {
+                id: null, 
+                name: '',
+                frequency: ''
+              }
+            })
+          }
+
+          openNewHabitModal = () => this.setState({
+            modal: true, 
+            form: {
+                name: '',
+                frequency: ''
+            }
+        })
+  
+        populateHabitForm = (habit) => this.setState({
+            modal: true, 
+            form: {
+                id: habit.id, 
+                name: habit.name,
+                frequency: habit.frequency
+            }
+        })
+    
+    
+
     render() {
         return (
             <>
@@ -98,12 +161,14 @@ class Tracker extends Component {
                     <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : 
                         <div className='habits-container'>
                             <div className='habits-info'>
+                                <button onClick={this.openNewGoalModal}> + </button>
                                 <h3>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>
                                 <p>Click on your goals on the left side of the page to view your habits. Feel free to add new goals and habits here.</p>
                             </div>
                         </div>}
                     </div>
             <GoalsModal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} onChange={this.onChange} onSubmit={this.onSubmit}/>
+            <HabitsModal toggle={this.toggleModal} {...this.state.habitForm} display={this.state.modal} onChange={this.habitChange} onSubmit={this.habitSubmit}/>
             </>
         )
     }
@@ -116,5 +181,5 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { getCurrentUser, addGoal, editGoal })(Tracker)
+export default connect(mapStateToProps, { getCurrentUser, addGoal, editGoal, addHabit, editHabit })(Tracker)
 
