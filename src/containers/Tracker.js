@@ -90,7 +90,6 @@ class Tracker extends Component {
                                     </section> )    
 
         return habit; 
-        
     }
 
     onClick = (id) => {
@@ -128,17 +127,20 @@ class Tracker extends Component {
             })
           }
 
-          openNewHabitModal = () => this.setState({
+    openNewHabitModal = (id) => {
+        this.setState({
             modal: true, 
-            form: {
+            habitForm: {
                 name: '',
-                frequency: ''
+                frequency: '',
+                goal_id: id 
             }
         })
+    }
   
         populateHabitForm = (habit) => this.setState({
             modal: true, 
-            form: {
+            habitForm: {
                 id: habit.id, 
                 name: habit.name,
                 frequency: habit.frequency
@@ -161,7 +163,6 @@ class Tracker extends Component {
                     <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : 
                         <div className='habits-container'>
                             <div className='habits-info'>
-                                <button onClick={this.openNewGoalModal}> + </button>
                                 <h3>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>
                                 <p>Click on your goals on the left side of the page to view your habits. Feel free to add new goals and habits here.</p>
                             </div>

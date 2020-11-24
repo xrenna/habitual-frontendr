@@ -15,7 +15,7 @@ export default function HabitsModal(props){
                     </label>
                     <label>
                         Habit Frequency(per week): 
-                        <input type="number" name="name"  onChange={props.onChange} value={props.name}/>
+                        <input type="number" name="frequency"  onChange={props.onChange} value={props.frequency}/>
                     </label>
                     <input type="submit" value="Submit" />
                 </form>

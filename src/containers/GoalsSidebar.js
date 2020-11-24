@@ -4,7 +4,6 @@ import { deleteGoal } from '../actions/goals'
 
 
  function GoalsSidebar (props) {
-    console.log(props)
     const deleteGoal = (goal) => {
         props.deleteGoal(goal.id)
       }

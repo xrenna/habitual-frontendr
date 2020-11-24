@@ -8,7 +8,8 @@ import { getCurrentUser } from './currentUser'
 
 const URL = 'http://localhost:3000/api/v1/habits'
 
-export function addHabit(name) {
+export function addHabit(habit) {
+  console.log(habit)
     return dispatch => {
         return fetch(URL, {
             credentials: "include",
@@ -16,7 +17,7 @@ export function addHabit(name) {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(name),
+            body: JSON.stringify(habit),
           })
           .then(response => response.json())
           .then(habit => {
