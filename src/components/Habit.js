@@ -2,6 +2,11 @@ import { connect } from 'react-redux'
 import { deleteHabit } from '../actions/habits'
 
 function Habit (props) {
+
+    const deleteHabit = (habit) => {
+        props.deleteHabit(habit.id)
+      }
+
     return (
         <>
         <button onClick={() => props.openNewHabitModal(props.id)}> + </button>
