@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { deleteHabit } from '../actions/habits'
+import sprite from '../imgs/sprite.svg'
 
 function Habit (props) {
 
@@ -15,7 +16,11 @@ function Habit (props) {
                <p>{habit.name}</p>
                <p>Frequency: {habit.frequency}</p>
                <p>Progress: {habit.progress}</p>
-               <span><button onClick={() => props.populateHabitForm(habit)}>Edit</button></span>
+               <span><button onClick={() => props.populateHabitForm(habit)}>
+                    <svg className="icon--edit">
+                        <use href={sprite + '#icon-edit'} />
+                    </svg>
+               </button></span>
                <span><button onClick={() => deleteHabit(habit)}>Delete</button></span>
             </div>
             )
