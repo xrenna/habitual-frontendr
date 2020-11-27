@@ -16,12 +16,16 @@ function Habit (props) {
                <p>{habit.name}</p>
                <p>Frequency: {habit.frequency}</p>
                <p>Progress: {habit.progress}</p>
-               <span><button onClick={() => props.populateHabitForm(habit)}>
-                    <svg className="icon--edit">
+               <span><a href="#" onClick={() => props.populateHabitForm(habit)}>
+                    <svg className="icon">
                         <use href={sprite + '#icon-edit'} />
                     </svg>
-               </button></span>
-               <span><button onClick={() => deleteHabit(habit)}>Delete</button></span>
+               </a></span>
+               <span><a onClick={() => deleteHabit(habit)}>
+                    <svg className="icon">
+                        <use href={sprite + '#icon-trash'} />
+                    </svg>
+               </a></span>
             </div>
             )
        }

@@ -123,6 +123,11 @@ body {
   .card:hover .card__side--back {
     transform: rotateY(0); }
 
+.icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  fill: #58B4d1; }
+
 /* The Modal (background) */
 .modal {
   display: none;
