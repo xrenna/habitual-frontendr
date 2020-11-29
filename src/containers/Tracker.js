@@ -12,7 +12,8 @@ class Tracker extends Component {
     state = {
         showHabit: false,
         id: null,  
-        modal: false,
+        goalModal: false,
+        modal: false, 
         form: {
             id: null,
             name: ''
@@ -29,6 +30,7 @@ class Tracker extends Component {
         this.props.getCurrentUser()
     }
 
+    toggleGoalModal = () => this.setState({goalModal: !this.state.goalModal})
     toggleModal = () => this.setState({modal: !this.state.modal})
     
     //GOAL FORM 
@@ -53,7 +55,7 @@ class Tracker extends Component {
           }
        
         this.setState({
-          modal: false,
+          goalModal: false,
           form: {
             id: null, 
             name: ''
@@ -62,15 +64,16 @@ class Tracker extends Component {
       }
     
 
-      openNewGoalModal = () => this.setState({
-          modal: true, 
+      openNewGoalModal = () => {this.setState({
+          goalModal: true, 
           form: {
               name: ''
           }
       })
+    }
 
       populateForm = (goal) => this.setState({
-          modal: true, 
+          goalModal: true, 
           form: {
               id: goal.id, 
               name: goal.name
@@ -168,7 +171,7 @@ class Tracker extends Component {
                             </div>
                         </div>}
                     </div>
-            <GoalsModal toggle={this.toggleModal} {...this.state.form} display={this.state.modal} onChange={this.onChange} onSubmit={this.onSubmit}/>
+            <GoalsModal toggle={this.toggleGoalModal} {...this.state.form} display={this.state.goalModal} onChange={this.onChange} onSubmit={this.onSubmit}/>
             <HabitsModal toggle={this.toggleModal} {...this.state.habitForm} display={this.state.modal} onChange={this.habitChange} onSubmit={this.habitSubmit}/>
             </>
         )
