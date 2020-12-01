@@ -47,7 +47,7 @@ import sprite from '../imgs/sprite.svg'
                         <use href={sprite + '#icon-plus'} />
                     </svg>
                 </a>
-                <span>ADD GOAL</span>
+                <span className= 'heading-tertiary'>ADD GOAL</span>
             </span>
             </>
         )

@@ -6,7 +6,7 @@ export default function HabitsModal(props){
 
     return (
         <div id="myModal" className="modal" style={{ display }}>
-            <div className="modal-content">
+            <div className="modal__content">
                 <span onClick={props.toggle} className="close">&times;</span>
                 <form onSubmit={props.onSubmit}>
                     <label>
