@@ -124,8 +124,9 @@ body {
     align-content: center;
     justify-content: center; }
     .card__side--front {
-      background-color: #ebebeb; }
+      background-image: linear-gradient(to left bottom, rgba(142, 202, 230, 0.8), rgba(33, 158, 188, 0.8)), url(./imgs/header.jpg); }
     .card__side--back {
+      background-color: #fff;
       transform: rotateY(180deg); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }

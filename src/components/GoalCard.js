@@ -12,8 +12,8 @@ function GoalCard (props) {
                 <h3 className='card__heading'>{props.name}</h3>
             </div>
             <div className='card__side card__side--back'>
-                <h5 className='card__details'>{props.name}'s Habits</h5>
-                <ul>
+                <header className='heading-tertiary'>{props.name}'s Habits</header>
+                <ul className='card__details'>
                     <li>{renderHabits()}</li>
                 </ul>
             </div>
