@@ -13,7 +13,7 @@ function GoalCard (props) {
             </div>
             <div className='card__side card__side--back'>
                 <header className='heading-tertiary'>{props.name}'s Habits</header>
-                <ul className='card__details'>
+                <ul className='card__side--details'>
                     <li>{renderHabits()}</li>
                 </ul>
             </div>
