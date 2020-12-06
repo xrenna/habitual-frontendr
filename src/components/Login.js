@@ -26,27 +26,27 @@ onSubmit = e => {
 
   render() {
     return (
-      <>
-        <form className='auth-form' onSubmit={this.onSubmit}>
+      <div className='auth-form-container'>
+        <form className='auth-form u-margin-top-huge' onSubmit={this.onSubmit}>
           <div class="u-margin-bottom-medium">
             <h2 class="heading-secondary">
                 Login 
             </h2>
           </div>
           <div class="auth-form__group">
-            <input placeholder="username" value={this.state.username} name="username" type="text" onChange={this.onChange} />
+            <input className='auth-form__input' placeholder="username" value={this.state.username} name="username" type="text" onChange={this.onChange} />
             <label for="username" class="auth-form__label">Username</label>
           </div>
           <div class="auth-form__group">
-            <input placeholder="password" value={this.state.password} name="password" type="password" onChange={this.onChange} />
+            <input className='auth-form__input' placeholder="password" value={this.state.password} name="password" type="password" onChange={this.onChange} />
             <label for="password" class="auth-form__label">Password</label>
           </div> 
           <div class="auth-form__group">
-            <input className='btn btn--small' type="submit" value="Log In"/>
+            <input className='btn ' type="submit" value="Log In"/>
           </div>
             
         </form>
-      </>
+      </div>
     )
   }
 }
