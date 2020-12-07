@@ -27,7 +27,7 @@ onSubmit = e => {
   render() {
     return (
       <div className='auth-form-container'>
-        <form className='auth-form u-margin-top-huge' onSubmit={this.onSubmit}>
+        <form className='auth-form u-margin-top-big' onSubmit={this.onSubmit}>
           <div class="u-margin-bottom-medium">
             <h2 class="heading-secondary">
                 Login 

@@ -1,3 +1,24 @@
+.nav {
+    background-color: $color-gray-light-2;
+    display: flex; 
+    justify-content: space-around;
+    padding: 1.5rem;
+
+    &__link-container{
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $color-secondary-bold; 
+    }
+}
+
+
+//VERTICAL NAV 
+
 // .nav {
    
 //     flex: 0 0 18%;

@@ -82,6 +82,9 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
 
+.u-margin-top-medium {
+  margin-top: 6rem !important; }
+
 .u-margin-top-big {
   margin-top: 8rem !important; }
 
@@ -231,6 +234,19 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer; }
+
+.nav {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem; }
+  .nav__link-container {
+    display: flex;
+    justify-content: space-between; }
+  .nav__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fd8500; }
 
 .sidebar {
   flex: 0 0 auto;

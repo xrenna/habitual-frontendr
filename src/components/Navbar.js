@@ -14,11 +14,9 @@ class NavBar extends Component {
       <nav className='nav'>
         {this.props.loggedIn ? 
             <>
-            <div className='nav__link-container'>
               <NavLink className='nav__link' to="/">Home</NavLink>
               <NavLink className='nav__link' to="/dashboard">Dashboard</NavLink>
               <NavLink className='nav__link' to="/tracker">Tracker</NavLink>
-            </div>
             <div className='nav__logout-container'>
               <Logout /> 
             </div>
