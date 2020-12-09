@@ -166,7 +166,7 @@ class Tracker extends Component {
                     <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : 
                         <div className='habits-container'>
                             <div className='habits-info'>
-                                <h3>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>
+                                <h3 className='heading-secondary'>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>
                                 <p>Click on your goals on the left side of the page to view your habits. Feel free to add new goals and habits here.</p>
                             </div>
                         </div>}

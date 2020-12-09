@@ -18,7 +18,7 @@ class Dashboard extends Component {
         return (
             <>
                 <div className='dashboard'>
-                    <h1> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h1>
+                    <h1 className='heading-secondary'> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h1>
                         <section className='cards'>{this.renderGoals()}</section>
                 </div>
             </>
