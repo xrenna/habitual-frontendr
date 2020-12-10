@@ -77,6 +77,19 @@ body {
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(14, 17, 17, 0.2); }
+  .heading-secondary--secondary {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, #ffb703, #fd8500);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s; }
+    .heading-secondary--secondary:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba(14, 17, 17, 0.2); }
 
 .heading-tertiary {
   font-size: 1.6rem;
