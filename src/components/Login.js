@@ -28,21 +28,21 @@ onSubmit = e => {
     return (
       <div className='auth-form-container'>
         <form className='auth-form u-margin-top-big' onSubmit={this.onSubmit}>
-          <div class="u-margin-bottom-medium">
-            <h2 class="heading-secondary">
+          <div className="u-margin-bottom-medium">
+            <h2 className="heading-secondary--secondary">
                 Login 
             </h2>
           </div>
-          <div class="auth-form__group">
+          <div className="auth-form__group">
             <input className='auth-form__input' placeholder="username" value={this.state.username} name="username" type="text" onChange={this.onChange} />
-            <label for="username" class="auth-form__label">Username</label>
+            <label for="username" className="auth-form__label">Username</label>
           </div>
-          <div class="auth-form__group">
+          <div className="auth-form__group">
             <input className='auth-form__input' placeholder="password" value={this.state.password} name="password" type="password" onChange={this.onChange} />
-            <label for="password" class="auth-form__label">Password</label>
+            <label for="password" className="auth-form__label">Password</label>
           </div> 
-          <div class="auth-form__group">
-            <input className='btn ' type="submit" value="Log In"/>
+          <div className="auth-form__group">
+            <input className='btn' type="submit" value="Log In"/>
           </div>
             
         </form>

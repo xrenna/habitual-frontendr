@@ -31,24 +31,24 @@ onSubmit = e => {
     return (
       <div className='auth-form-container'>
         <form className='auth-form u-margin-top-medium' onSubmit={this.onSubmit}>
-          <div class="u-margin-bottom-medium">
-            <h2 class="heading-secondary--secondary">
+          <div className="u-margin-bottom-medium">
+            <h2 className="heading-secondary--secondary">
                 Signup 
             </h2>
           </div>
-          <div class="auth-form__group">
+          <div className="auth-form__group">
             <input placeholder="username" className='auth-form__input' value={this.state.username} name="username" type="text" onChange={this.onChange} />
-            <label for="username" class="auth-form__label">Username</label>
+            <label for="username" className="auth-form__label">Username</label>
           </div>
-          <div class="auth-form__group">
+          <div className="auth-form__group">
             <input placeholder="password" className='auth-form__input' value={this.state.password} name="password" type="password" onChange={this.onChange} />
-            <label for="username" class="auth-form__label">Password</label>
+            <label for="username" className="auth-form__label">Password</label>
           </div>
-          <div class="auth-form__group">
+          <div className="auth-form__group">
             <input placeholder="name" className='auth-form__input' value={this.state.name} name="name" type="text" onChange={this.onChange} />
-            <label for="username" class="auth-form__label">Name</label>
+            <label for="username" className="auth-form__label">Name</label>
           </div>
-          <div class="auth-form__group">
+          <div className="auth-form__group">
             <input className='btn' type="submit" value="Signup"/>
           </div>
            
