@@ -7,6 +7,7 @@ import Login from './components/Login.js'
 import Signup from './components/Signup'
 import NavBar from './components/Navbar';
 import Tracker from './containers/Tracker';
+import PrivateRoute from './containers/PrivateRoute';
 
 function App() {
   const history = useHistory();
@@ -19,8 +20,8 @@ function App() {
           <Route exact path='/login' component={Login} history={history}/>
           <Route exact path='/signup' component={Signup} history={history}/>
           <Route exact path="/" component={Home} history={history}/>
-          <Route exact path="/Dashboard" component={Dashboard} history={history}/>
-          <Route exact path="/Tracker" component={Tracker} history={history}/>
+          <PrivateRoute exact path="/Dashboard" component={Dashboard} history={history}/>
+          <PrivateRoute exact path="/Tracker" component={Tracker} history={history}/>
         </Switch>
       </Router>
     </div>
