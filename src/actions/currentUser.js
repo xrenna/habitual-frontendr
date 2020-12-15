@@ -41,7 +41,7 @@ import {
         .then(r => r.json())
         .then(response => {
           if (response.error) {
-            alert(response.error)
+            console.log(response.error)
           } else {
             dispatch({
               type: SET_CURRENT_USER, 
