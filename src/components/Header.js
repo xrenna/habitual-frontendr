@@ -18,11 +18,6 @@ class Header extends Component {
                     <span className='heading-primary--sub'>A place for change</span>
                     </h1>
                 </div>
-                
-                <div className='header__btn'>
-                    <button onClick={() => this.onClick('/signup')} className="btn">Sign up Now</button>
-                    <button onClick={() => this.onClick('/login')} className="btn btn--small">Login</button>
-                </div>
             </header>
         )
     }
