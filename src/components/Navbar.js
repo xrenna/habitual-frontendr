@@ -20,8 +20,13 @@ class NavBar extends Component {
             <div className='nav__logout-container'>
               <Logout /> 
             </div>
-            </>:
-            null
+            </> 
+            :
+            <>
+              <NavLink className='nav__link' to="/">Home</NavLink>
+              <NavLink className='nav__link' to="/signup">Sign Up</NavLink>
+              <NavLink className='nav__link' to="/login">Login</NavLink>
+            </>
         }
       </nav>
       
