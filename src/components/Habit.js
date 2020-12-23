@@ -15,7 +15,7 @@ function Habit (props) {
        { props.habits && props.habits.map(habit =>    
             <div key={habit.id} className='habits-card__content' >
                <p>{habit.name}</p>
-               <ProgressForm/>
+               <ProgressForm key={habit.id}/>
                <p>Frequency: {habit.frequency}</p>
                <p>Progress: {habit.progress}</p>
                <span><a href="#" onClick={() => props.populateHabitForm(habit)}>
