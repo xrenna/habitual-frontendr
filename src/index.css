@@ -35,6 +35,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
+  padding-top: 0;
   text-align: center; }
 
 body {
@@ -263,7 +264,6 @@ body {
     cursor: pointer; }
 
 .nav {
-  background-color: #eee;
   display: flex;
   justify-content: space-around;
   padding: 1.5rem; }

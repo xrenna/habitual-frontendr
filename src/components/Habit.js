@@ -18,16 +18,19 @@ function Habit (props) {
                <ProgressForm key={habit.id}/>
                <p>Frequency: {habit.frequency}</p>
                <p>Progress: {habit.progress}</p>
-               <span><a href="#" onClick={() => props.populateHabitForm(habit)}>
-                    <svg className="icon">
-                        <use href={sprite + '#icon-edit'} />
-                    </svg>
-               </a></span>
-               <span><a onClick={() => deleteHabit(habit)}>
-                    <svg className="icon">
-                        <use href={sprite + '#icon-trash'} />
-                    </svg>
-               </a></span>
+               <span className='habit-svgs'>
+                    <a href="#" onClick={() => props.populateHabitForm(habit)}>
+                        <svg className="icon">
+                            <use href={sprite + '#icon-edit'} />
+                        </svg>
+                    </a>
+                
+                    <a href='#' onClick={() => deleteHabit(habit)}>
+                        <svg className="icon">
+                            <use href={sprite + '#icon-trash'} />
+                        </svg>
+                    </a>
+               </span>
             </div>
             )
        }
