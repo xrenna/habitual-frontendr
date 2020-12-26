@@ -14,10 +14,14 @@ function Habit (props) {
         <button onClick={() => props.openNewHabitModal(props.id)}> + </button>
        { props.habits && props.habits.map(habit =>    
             <div key={habit.id} className='habits-card__content' >
-               <p>{habit.name}</p>
-               <ProgressForm key={habit.id}/>
-               <p>Frequency: {habit.frequency}</p>
-               <p>Progress: {habit.progress}</p>
+               <div>{habit.name}</div>
+               <div>
+                <ProgressForm key={habit.id}/>
+               </div>
+               <div>
+                <p>Frequency: {habit.frequency}</p>
+                <p>Progress: {habit.progress}</p>
+               </div>
                <span className='habit-svgs'>
                     <a href="#" onClick={() => props.populateHabitForm(habit)}>
                         <svg className="icon">

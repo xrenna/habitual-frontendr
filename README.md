@@ -14,7 +14,7 @@
 
 ## <a id="about">About the Project</a>
 
-Habitual is SPA that allows users to create goals and habits associated with them. Users can track their progress and set frequency on a weekly basis to set small obtainable goals that make habit forming changes. See the backend<a href="https://github.com/jordles113/habitual-backend">here</a>. This is the React-Redux front end.
+Habitual is SPA that allows users to create goals and habits associated with them. Users can track their progress and set frequency on a weekly basis to set small obtainable goals that make habit forming changes. See the backend <a href="https://github.com/jordles113/habitual-backend">here</a>. This is the React-Redux front end.
 
 Watch the demo <a href="https://www.youtube.com/watch?v=tkIHtrT4py0">here</a>.
 

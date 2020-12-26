@@ -186,6 +186,10 @@ body {
   .card:hover .card__side--back {
     transform: rotateY(0); }
 
+.habits-card__content {
+  display: flex;
+  justify-content: space-around; }
+
 .icon {
   height: 2.25rem;
   width: 2.25rem;
