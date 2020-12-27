@@ -16,7 +16,7 @@ function Habit (props) {
             <div key={habit.id} className='habits-card__content' >
                <div>{habit.name}</div>
                <div>
-                <ProgressForm key={habit.id}/>
+                <ProgressForm />
                </div>
                <div>
                 <p>Frequency: {habit.frequency}</p>
