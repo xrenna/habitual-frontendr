@@ -188,7 +188,15 @@ body {
 
 .habits-card__content {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  width: 60rem;
+  height: 5rem;
+  box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.3);
+  border-radius: 2px; }
+  .habits-card__content:not(:last-child) {
+    margin-bottom: 4rem; }
 
 .icon {
   height: 2.25rem;
@@ -318,9 +326,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   background-color: #eee;
   border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px; }
+  border-bottom-right-radius: 2px;
+  padding: 2rem; }
 
 .header {
   height: 90vh;

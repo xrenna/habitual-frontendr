@@ -85,7 +85,7 @@ class Tracker extends Component {
      renderHabits = (id) => {
         const habitObj = this.props.currentUser && this.props.currentUser.goals.filter(goal => id === goal.id) 
         const habit = habitObj.map(habit => 
-                                    <section className='habits-card' key={habit.id}>
+                                    <section className='habits-card-container' key={habit.id}>
                                         <Habit {...habit}
                                         openNewHabitModal={this.openNewHabitModal} 
                                         populateHabitForm={this.populateHabitForm}

@@ -1,5 +1,19 @@
-.habits-card__content {
-    display: flex; 
-    justify-content: space-around;
+.habits-card {
+
+
+    &__content {
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        background: $color-whiter; 
+        width: 60rem;
+        height: 5rem; 
+        box-shadow: 0 1rem 2rem rgba($color-black, .30);
+        border-radius: 2px;
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
 
 }

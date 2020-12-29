@@ -11,7 +11,8 @@ function Habit (props) {
 
     return (
         <>
-        <button onClick={() => props.openNewHabitModal(props.id)}> + </button>
+        <button className='btn btn--small u-margin-bottom-small' onClick={() => props.openNewHabitModal(props.id)}> + </button>
+        <div className='habit-cards'>
        { props.habits && props.habits.map(habit =>    
             <div key={habit.id} className='habits-card__content' >
                <div>{habit.name}</div>
@@ -38,6 +39,7 @@ function Habit (props) {
             </div>
             )
        }
+       </div>
         </>
     );
   }
