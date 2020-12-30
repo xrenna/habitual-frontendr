@@ -12,18 +12,20 @@ function Habit (props) {
     return (
         <>
         <button className='btn btn--small u-margin-bottom-small' onClick={() => props.openNewHabitModal(props.id)}> + </button>
-        <div className='habit-cards'>
        { props.habits && props.habits.map(habit =>    
-            <div key={habit.id} className='habits-card__content' >
-               <div>{habit.name}</div>
-               <div>
-                <ProgressForm />
+            <div key={habit.id} className='habits-card' >
+               <div className='habits-card__title'>
+                    <h2>{habit.name}</h2>
+                    <h4>{habit.frequency} days/week</h4>
+               </div>
+               <div className='habits-card__progress-form'>
+                    <ProgressForm />
                </div>
                <div>
-                <p>Frequency: {habit.frequency}</p>
-                <p>Progress: {habit.progress}</p>
-               </div>
-               <span className='habit-svgs'>
+                <div className='habits-card__progress'>
+                    <p>Progress: {habit.progress}/{habit.frequency}</p>
+                </div>
+                <div className='habit-card__svgs'>
                     <a href="#" onClick={() => props.populateHabitForm(habit)}>
                         <svg className="icon">
                             <use href={sprite + '#icon-edit'} />
@@ -35,11 +37,11 @@ function Habit (props) {
                             <use href={sprite + '#icon-trash'} />
                         </svg>
                     </a>
-               </span>
+                </div>
+               </div>
             </div>
             )
        }
-       </div>
         </>
     );
   }

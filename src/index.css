@@ -186,17 +186,21 @@ body {
   .card:hover .card__side--back {
     transform: rotateY(0); }
 
-.habits-card__content {
+.habits-card {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: #fff;
   width: 60rem;
-  height: 5rem;
+  height: 6.45rem;
   box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.3);
   border-radius: 2px; }
-  .habits-card__content:not(:last-child) {
+  .habits-card:not(:last-child) {
     margin-bottom: 4rem; }
+  .habits-card__title {
+    flex: 0 0 20%; }
+  .habits-card__progress-form {
+    flex: 0 0 45%; }
 
 .icon {
   height: 2.25rem;
@@ -330,7 +334,8 @@ body {
   background-color: #eee;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-  padding: 2rem; }
+  padding: 2rem;
+  min-height: 85vh; }
 
 .header {
   height: 90vh;
@@ -397,7 +402,7 @@ body {
 
 .dashboard {
   background-color: #eee;
-  min-height: 90vh; }
+  min-height: 85vh; }
 
 .tracker-content {
   display: flex; }
