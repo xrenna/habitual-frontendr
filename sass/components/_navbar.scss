@@ -3,6 +3,8 @@
     justify-content: space-around;
     padding: 1.5rem;
 
+    animation: slideInBlurredRight 1.2s ease-out;
+
     &__link-container{
         display: flex; 
         justify-content: space-between;

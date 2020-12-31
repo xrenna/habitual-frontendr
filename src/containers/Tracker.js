@@ -163,7 +163,9 @@ class Tracker extends Component {
                                   goals ={this.props.currentUser && this.props.currentUser.goals}/>
                 </nav>
                 {this.state.showHabit ? 
-                    <div className='habits-container'>{this.renderHabits(this.state.id)}</div> : 
+                    <div className='habits-container'>
+                        {this.renderHabits(this.state.id)}
+                    </div> : 
                         <div className='habits-container'>
                             <div className='habits-info'>
                                 <h3 className='heading-secondary'>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>

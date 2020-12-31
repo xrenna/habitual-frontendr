@@ -1,24 +1,24 @@
 import React, { Component } from 'react'
 
-export default class ProgressForm extends Component {
+export default class ProgresshtmlForm extends Component {
     render() {
         return (
            
-            <div class="weekdays-selector">
-                <input type="checkbox" id="weekday-mon" class="weekdays-selector__input" />
-                <label for="weekday-mon">M</label>
-                <input type="checkbox" id="weekday-tue" class="weekdays-selector__input" />
-                <label for="weekday-tue">T</label>
-                <input type="checkbox" id="weekday-wed" class="weekdays-selector__input" />
-                <label for="weekday-wed">W</label>
-                <input type="checkbox" id="weekday-thu" class="weekdays-selector__input" />
-                <label for="weekday-thu">T</label>
-                <input type="checkbox" id="weekday-fri" class="weekdays-selector__input" />
-                <label for="weekday-fri">F</label>
-                <input type="checkbox" id="weekday-sat" class="weekdays-selector__input" />
-                <label for="weekday-sat">S</label>
-                <input type="checkbox" id="weekday-sun" class="weekdays-selector__input" />
-                <label for="weekday-sun">S</label>
+            <div className="weekdays-selector">
+                <input type="checkbox" id="weekday-mon" className="weekdays-selector__input" />
+                <label htmlFor="weekday-mon">M</label>
+                <input type="checkbox" id="weekday-tue" className="weekdays-selector__input" />
+                <label htmlFor="weekday-tue">T</label>
+                <input type="checkbox" id="weekday-wed" className="weekdays-selector__input" />
+                <label htmlFor="weekday-wed">W</label>
+                <input type="checkbox" id="weekday-thu" className="weekdays-selector__input" />
+                <label htmlFor="weekday-thu">T</label>
+                <input type="checkbox" id="weekday-fri" className="weekdays-selector__input" />
+                <label htmlFor="weekday-fri">F</label>
+                <input type="checkbox" id="weekday-sat" className="weekdays-selector__input" />
+                <label htmlFor="weekday-sat">S</label>
+                <input type="checkbox" id="weekday-sun" className="weekdays-selector__input" />
+                <label htmlFor="weekday-sun">S</label>
             </div>
            
         )

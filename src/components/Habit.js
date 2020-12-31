@@ -21,24 +21,23 @@ function Habit (props) {
                <div className='habits-card__progress-form'>
                     <ProgressForm />
                </div>
-               <div>
                 <div className='habits-card__progress'>
-                    <p>Progress: {habit.progress}/{habit.frequency}</p>
+                    <p>Progress:</p>
+                    <p>{habit.progress}/{habit.frequency}</p>
                 </div>
                 <div className='habit-card__svgs'>
-                    <a href="#" onClick={() => props.populateHabitForm(habit)}>
+                    <a className='habit-card__svgs--icon' href="#" onClick={() => props.populateHabitForm(habit)}>
                         <svg className="icon">
                             <use href={sprite + '#icon-edit'} />
                         </svg>
                     </a>
                 
-                    <a href='#' onClick={() => deleteHabit(habit)}>
+                    <a className='habit-card__svgs--icon' href='#' onClick={() => deleteHabit(habit)}>
                         <svg className="icon">
                             <use href={sprite + '#icon-trash'} />
                         </svg>
                     </a>
                 </div>
-               </div>
             </div>
             )
        }
