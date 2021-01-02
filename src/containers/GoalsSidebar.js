@@ -12,7 +12,7 @@ import sprite from '../imgs/sprite.svg'
         const renderGoals = () => {
             return props.goals && props.goals.map(goal => 
                     <li className='side-nav__item' 
-                        onClick={() => props.onClick(goal.id)} key={goal.id}>
+                        onClick={() => props.onClick(goal.id)} key={goal.id}>              
                         <Goals {...goal}/>
                         <span>
                             <span className='side-nav__icon'>
@@ -20,8 +20,7 @@ import sprite from '../imgs/sprite.svg'
                                     <svg className="icon icon--trash">
                                         <use href={sprite + '#icon-trash'} />
                                     </svg>
-                                </a>
-                                
+                                </a>    
                             </span>
                             <span>
                                 <a onClick={() => props.populateForm(goal)}>
