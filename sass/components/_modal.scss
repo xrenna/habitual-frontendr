@@ -14,17 +14,18 @@
   
     /* Modal Content/Box */
     &__content {
-      background-color: #fefefe;
+      background-image: linear-gradient(to right bottom, 
+                                    rgba($color-primary, 1), 
+                                    rgba($color-primary-dark-3, 1));
       margin: 15% auto; /* 15% from the top and centered */
       padding: 20px;
-      border: 1px solid #888;
-      width: 80%; /* Could be more or less, depending on screen size */
+      width: 70%; /* Could be more or less, depending on screen size */
     }
   }
   
   /* The Close Button */
   .close {
-    color: #aaa;
+    color: $color-white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -32,7 +33,7 @@
   
     &:hover,
     &:focus {
-      color: black;
+      color: $color-secondary-bold;
       text-decoration: none;
       cursor: pointer;
     }

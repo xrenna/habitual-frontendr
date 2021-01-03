@@ -119,6 +119,9 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
+.u-margin-left-small {
+  margin-left: 9rem !important; }
+
 .btn {
   border-radius: 2rem;
   border: none;
@@ -190,6 +193,44 @@ body {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+
+.form {
+  max-width: 85%;
+  padding: 6rem; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(235, 235, 235, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    margin-left: 7rem; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.1);
+      border-bottom: 3px solid #ffb703; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #fd8500; }
+    .form__input::-webkit-input-placeholder {
+      color: #333; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
 
 .habits-card {
   display: flex;
@@ -281,22 +322,21 @@ body {
   /* Black w/ opacity */
   /* Modal Content/Box */ }
   .modal__content {
-    background-color: #fefefe;
+    background-image: linear-gradient(to right bottom, #58b4d1, #023047);
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    width: 70%;
     /* Could be more or less, depending on screen size */ }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #ebebeb;
   float: right;
   font-size: 28px;
   font-weight: bold; }
   .close:hover, .close:focus {
-    color: black;
+    color: #fd8500;
     text-decoration: none;
     cursor: pointer; }
 

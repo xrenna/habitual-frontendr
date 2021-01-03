@@ -6,28 +6,12 @@ import ProgressForm from './ProgressForm'
 
 class Habit extends Component {
 
-    state = {
-        monday: false, 
-        tuesday: false, 
-        wednesday: false, 
-        thursday: false, 
-        friday: false, 
-        saturday: false,
-        sunday: false
-    }
-
-    btnToggle = (event) => {
-        console.log(event.target.name)
-        this.setState({
-        [event.target.name]: !this.state[event.target.name]
-        })
-    }
-
     deleteHabit = (habit) => {
         this.props.deleteHabit(habit.id)
       }
 
     render() {
+        console.log(this.state)
         return (
             <>
         <button className='btn btn--small u-margin-bottom-small' onClick={() => this.props.openNewHabitModal(this.props.id)}> + </button>
@@ -39,7 +23,7 @@ class Habit extends Component {
                </div>
                <hr width="1" size="40"></hr>
                <div className='habits-card__progress-form'>
-                    <ProgressForm btnToggle={this.btnToggle} days={this.state}/>
+                    <ProgressForm />
                </div>
                <hr width="1" size="40"></hr>
                <div className='habits-card__right'>
