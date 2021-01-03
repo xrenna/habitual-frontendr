@@ -1,24 +1,18 @@
 import React, { Component } from 'react'
 
-export default class ProgresshtmlForm extends Component {
+export default class ProgressForm extends Component {
     render() {
+        
         return (
            
             <div className="weekdays-selector">
-                <input type="checkbox" id="weekday-mon" className="weekdays-selector__input" />
-                <label htmlFor="weekday-mon">M</label>
-                <input type="checkbox" id="weekday-tue" className="weekdays-selector__input" />
-                <label htmlFor="weekday-tue">T</label>
-                <input type="checkbox" id="weekday-wed" className="weekdays-selector__input" />
-                <label htmlFor="weekday-wed">W</label>
-                <input type="checkbox" id="weekday-thu" className="weekdays-selector__input" />
-                <label htmlFor="weekday-thu">T</label>
-                <input type="checkbox" id="weekday-fri" className="weekdays-selector__input" />
-                <label htmlFor="weekday-fri">F</label>
-                <input type="checkbox" id="weekday-sat" className="weekdays-selector__input" />
-                <label htmlFor="weekday-sat">S</label>
-                <input type="checkbox" id="weekday-sun" className="weekdays-selector__input" />
-                <label htmlFor="weekday-sun">S</label>
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='monday' style={this.props.days.monday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>M</button >
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='tuesday' style={this.props.days.tuesday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>T</button >         
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='wednesday' style={this.props.days.wednesday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>W</button >
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='thursday' style={this.props.days.thursday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>T</button >
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='friday' style={this.props.days.friday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>F</button >
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='saturday' style={this.props.days.saturday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>S</button >
+                <button onClick={(event) => this.props.btnToggle(event)} className='btn btn--weekday' name='sunday' style={this.props.days.sunday ? {backgroundColor:'#fd8500'} : {backgroundColor:'#eee'}}>S</button>
             </div>
            
         )
