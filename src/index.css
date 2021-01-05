@@ -352,6 +352,10 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     color: #fd8500; }
+    .nav__link:hover {
+      transform: translateY(-2px) scale(1); }
+    .nav__link:active {
+      transform: translateY(0); }
 
 .weekdays-selector {
   display: flex;
