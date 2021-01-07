@@ -17,10 +17,12 @@
 
         &:hover {
             transform: translateY(-2px) scale(1);
+            text-shadow: 0 1rem 1rem rgba($color-black, 0.25);
         }
 
         &:active {
             transform: translateY(0);
+            text-shadow: 0 1rem 1rem rgba($color-black, 0.25);
         }
     }
 }
