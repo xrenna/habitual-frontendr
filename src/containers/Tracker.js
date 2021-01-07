@@ -112,8 +112,8 @@ class Tracker extends Component {
             
         })}
 
-        habitSubmit = (e) => {
-            e.preventDefault()
+        habitSubmit = () => {
+            // e.preventDefault()
             if (this.state.habitForm.id) {
                 this.props.editHabit(this.state.habitForm)
               } else {
