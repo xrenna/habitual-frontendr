@@ -46,8 +46,7 @@ class Tracker extends Component {
         })
     }
 
-    onSubmit = (e) => {
-        e.preventDefault()
+    onSubmit = () => {
         if (this.state.form.id) {
             this.props.editGoal(this.state.form)
           } else {
