@@ -73,5 +73,10 @@ body {
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 1rem; 
+
+        &--card {
+            background-color: $color-gray-light-2;
+            padding: 1rem; 
+        }
     }
 
