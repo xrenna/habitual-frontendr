@@ -18,11 +18,11 @@ export default function GoalsModal(props){
                                placeholder="Goal Name" 
                                type="text" 
                                name="name" 
-                               ref={register({ required: true, maxLength: 20 })} 
+                               ref={register({ required: true, maxLength: 14 })} 
                                onChange={props.onChange} 
                                value={props.name}/>
                         {errors.name && errors.name.type === 'required' && <span>This field is required</span>}
-                        {errors.name && errors.name.type === 'maxLength' && <span>Maxium of 20 characters</span>}
+                        {errors.name && errors.name.type === 'maxLength' && <span>Maxium of 14 characters</span>}
                         <label htmlFor="name" className="form__label u-margin-left-small">Goal Name</label>
                     </div>
                     <input className='btn btn--small u-margin-left-small' type="submit" value="Submit" />
