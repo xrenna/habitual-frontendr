@@ -10,6 +10,11 @@ import rootReducer from './reducers'
 
 import reportWebVitals from './reportWebVitals';
 
+// import Loader from 'react-loaders'
+
+
+// <Loader type="ball-spin-fade-loader" />
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))

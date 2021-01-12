@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import GoalsSidebar from './GoalsSidebar'
-import Habit from '../components/Habit'
+import HabitsList from './HabitsList'
 import GoalsModal from '../components/GoalsModal'
 import HabitsModal from '../components/HabitsModal'
 import { getCurrentUser } from '../actions/currentUser'
@@ -88,7 +88,7 @@ class Tracker extends Component {
         const habitObj = this.props.currentUser && this.props.currentUser.goals.filter(goal => id === goal.id) 
         const habit = habitObj.map(habit => 
                                     <section className='habits-card-container' key={habit.id}>
-                                        <Habit {...habit}
+                                        <HabitsList {...habit}
                                         openNewHabitModal={this.openNewHabitModal} 
                                         populateHabitForm={this.populateHabitForm}
                                         />

@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteHabit } from '../actions/habits'
 import sprite from '../imgs/sprite.svg'
-import ProgressForm from './ProgressForm'
+import ProgressForm from '../components/ProgressForm'
 
-class Habit extends Component {
+class HabitsList extends Component {
 
     deleteHabit = (habit) => {
         this.props.deleteHabit(habit.id)
@@ -53,4 +53,4 @@ class Habit extends Component {
     }
 }
   
-  export default connect(null, { deleteHabit })(Habit);
+  export default connect(null, { deleteHabit })(HabitsList);
