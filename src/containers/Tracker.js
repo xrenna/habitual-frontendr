@@ -7,10 +7,10 @@ import { getCurrentUser } from '../actions/currentUser'
 import { addGoal, editGoal } from '../actions/goals'
 import { addHabit, editHabit } from '../actions/habits'
 import { connect } from 'react-redux'
-// import Loader from 'react-loaders'
+import Loader from 'react-loaders'
 
 
-// <Loader type="ball-spin-fade-loader" />
+
 class Tracker extends Component {
     state = {
         showHabit: false,
