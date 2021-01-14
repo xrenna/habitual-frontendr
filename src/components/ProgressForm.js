@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateProgressCount } from '../actions/habits'
 
-export default class ProgressForm extends Component {
+class ProgressForm extends Component {
 
     state = {
         monday: false, 
@@ -18,7 +20,7 @@ export default class ProgressForm extends Component {
         this.setState({
             [event.target.name]: !this.state[event.target.name]
         })
-        
+        // this.progressCount()
     }
 
     render() {
@@ -40,6 +42,10 @@ export default class ProgressForm extends Component {
 
     progressCount = () => {
         let progressCount = Object.values(this.state).filter(day => day === true).length
+        let habit = this.props.habit && this.props.habit.id 
+        this.props.updateProgressCount({progress: progressCount}, this.props.id)
         console.log(progressCount)
     }
 }
+
+export default connect( null, { updateProgressCount })(ProgressForm)

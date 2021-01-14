@@ -11,7 +11,6 @@ class HabitsList extends Component {
       }
 
     render() {
-        console.log(this.state)
         return (
             <>
         <button className='btn btn--small u-margin-bottom-small' onClick={() => this.props.openNewHabitModal(this.props.id)}> + </button>
@@ -23,7 +22,7 @@ class HabitsList extends Component {
                </div>
                <hr width="1" size="40"></hr>
                <div className='habits-card__progress-form'>
-                    <ProgressForm />
+                    <ProgressForm {...habit} />
                </div>
                <hr width="1" size="40"></hr>
                <div className='habits-card__right'>
