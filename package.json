@@ -9,6 +9,7 @@
     "loaders.css": "^0.1.2",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
+    "react-beautiful-dnd": "^13.0.0",
     "react-dom": "^17.0.1",
     "react-form-hook": "^0.0.1",
     "react-hook-form": "^6.12.2",

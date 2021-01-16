@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import GoalsSidebar from './GoalsSidebar'
 import HabitsList from './HabitsList'
 import GoalsModal from '../components/GoalsModal'
@@ -7,7 +7,8 @@ import { getCurrentUser } from '../actions/currentUser'
 import { addGoal, editGoal } from '../actions/goals'
 import { addHabit, editHabit } from '../actions/habits'
 import { connect } from 'react-redux'
-import Loader from 'react-loaders'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+
 
 
 
@@ -87,12 +88,17 @@ class Tracker extends Component {
      renderHabits = (id) => {
         const habitObj = this.props.currentUser && this.props.currentUser.goals.filter(goal => id === goal.id) 
         const habit = habitObj.map(habit => 
-                                    <section className='habits-card-container' key={habit.id}>
-                                        <HabitsList {...habit}
-                                        openNewHabitModal={this.openNewHabitModal} 
-                                        populateHabitForm={this.populateHabitForm}
-                                        />
-                                    </section> )    
+                                    <Droppable droppableId={(this.state.id).toString()}>
+                                    {(provided) => (
+                                        <section className='habits-card-container' {...provided.droppableProps} ref={provided.innerRef} key={habit.id}>
+                                            <HabitsList {...habit}
+                                                    openNewHabitModal={this.openNewHabitModal} 
+                                                    populateHabitForm={this.populateHabitForm}
+                                                    />
+                                            {provided.placeholder}
+                                        </section> )}
+                                    </Droppable>
+        )   
 
         return habit; 
     }
@@ -157,6 +163,7 @@ class Tracker extends Component {
     render() {
         return (
             <>
+            <DragDropContext>
             <div className = 'tracker-content'>
                 <nav className = 'sidebar sidebar--goals'>
                     <GoalsSidebar openNewGoalModal={this.openNewGoalModal} 
@@ -165,9 +172,12 @@ class Tracker extends Component {
                                   goals ={this.props.currentUser && this.props.currentUser.goals}/>
                 </nav>
                 {this.state.showHabit ? 
-                    <div className='habits-container'>
-                        {this.renderHabits(this.state.id)}
-                    </div> : 
+                    
+                        <div className='habits-container' >
+                            {this.renderHabits(this.state.id)}
+                        </div>
+                    
+                    : 
                         <div className='habits-container'>
                             <div className='habits-info'>
                                 <h3 className='heading-secondary'>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>
@@ -177,6 +187,7 @@ class Tracker extends Component {
                     </div>
             <GoalsModal toggle={this.toggleGoalModal} {...this.state.form} display={this.state.goalModal} onChange={this.onChange} onSubmit={this.onSubmit}/>
             <HabitsModal toggle={this.toggleModal} {...this.state.habitForm} display={this.state.modal} onChange={this.habitChange} onSubmit={this.habitSubmit}/>
+            </DragDropContext>
             </>
         )
     }

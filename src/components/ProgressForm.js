@@ -43,7 +43,7 @@ class ProgressForm extends Component {
     progressCount = () => {
         let progressCount = Object.values(this.state).filter(day => day === true).length
         let habit = this.props.habit && this.props.habit.id 
-        this.props.updateProgressCount({progress: progressCount}, this.props.id)
+        this.props.updateProgressCount({ progress: progressCount }, this.props.id)
         console.log(progressCount)
     }
 }
