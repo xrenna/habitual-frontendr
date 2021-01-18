@@ -92,6 +92,7 @@ class Tracker extends Component {
                                     {(provided) => (
                                         <section className='habits-card-container' {...provided.droppableProps} ref={provided.innerRef} key={habit.id}>
                                             <HabitsList {...habit}
+                                                    key={habit.id}
                                                     openNewHabitModal={this.openNewHabitModal} 
                                                     populateHabitForm={this.populateHabitForm}
                                                     />

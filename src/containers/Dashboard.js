@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GoalCard from '../components/GoalCard'
 import { getCurrentUser } from '../actions/currentUser'
 import { connect } from 'react-redux'
-import Loader from 'react-loaders'
+import Filters from '../components/Filters'
 
 
 
@@ -12,17 +12,19 @@ class Dashboard extends Component {
         this.props.getCurrentUser()
     }
 
+    searchedGoals =  () => this.props.currentUser.goals.filter(goal => goal.name.toLowerCase().includes(this.props.search.toLowerCase()))
+
     renderGoals = () => {
-        return this.props.currentUser && this.props.currentUser.goals.map(goal => <div className='card' key={goal.id}><GoalCard {...goal}  /></div>)
+        return this.searchedGoals().map(goal => <div className='card' key={goal.id}><GoalCard {...goal}  /></div>)
     }
 
     render() {
         
         return (
             <>
-
+            <h1 className='heading-secondary'> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h1>
+                <Filters/>
                 <div className='dashboard'>
-                    <h1 className='heading-secondary'> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h1>
                         <section className='cards'>{this.renderGoals()}</section>
                 </div>
             </>
@@ -33,7 +35,8 @@ class Dashboard extends Component {
 const mapStateToProps = state => {
     return {
         currentUser: state.currentUser, 
-        loggedIn: !!state.currentUser
+        loggedIn: !!state.currentUser,
+        search: state.goals.filtersForm.search
     }
 }
 

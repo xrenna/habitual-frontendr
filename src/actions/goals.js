@@ -1,7 +1,8 @@
 import {
     ADD_GOAL, 
     EDIT_GOAL,
-    DELETE_GOAL
+    DELETE_GOAL, 
+    FILTERS_FORM_CHANGE
 } from '../actionTypes'
 
 import { getCurrentUser } from './currentUser'
@@ -80,3 +81,8 @@ export function deleteGoal(goalId) {
     })
   }
 }
+
+export const handleSearchFormChange = (e) => ({
+  type: FILTERS_FORM_CHANGE,
+  payload: {name: e.target.name, value: e.target.value}
+})

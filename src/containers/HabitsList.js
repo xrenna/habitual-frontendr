@@ -18,7 +18,7 @@ class HabitsList extends Component {
        { this.props.habits && this.props.habits.map((habit, index) => 
         <Draggable draggableId={(habit.id).toString()} index={index}>
                                             {(provided) => (     
-            <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className='habits-card' >
+            <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className='habits-card' key={habit.id} >
                <div className='habits-card__title'>
                     <h2>{habit.name}</h2>
                     <h4>{habit.frequency} days/week</h4>
