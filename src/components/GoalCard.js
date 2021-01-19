@@ -9,7 +9,7 @@ function GoalCard (props) {
     return (
         <>
             <div className='card__side card__side--front'>
-                <h3 className='card__heading'>{props.name}</h3>
+                <h3 className='card__heading card-heading'>{props.name}</h3>
             </div>
             <div className='card__side card__side--back'>
                 <header className='heading-tertiary heading-tertiary--card'>{props.name}'s Habits</header>

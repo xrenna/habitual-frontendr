@@ -10,9 +10,9 @@
     // FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;
-    flex: 0 1 18%;
+    flex: 0 1 22%;
     transform-style:preserve-3d;
-    height: 25rem;
+    height: 30rem;
     margin-top: 3rem;
     
     &__heading {
@@ -52,6 +52,11 @@
 
         &--li {
            font-size: 1.25rem;
+           font-weight: 700;
+           
+           &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
         }
     }
   

@@ -75,8 +75,18 @@ body {
         margin-bottom: 1rem; 
 
         &--card {
-            background-color: $color-gray-light-2;
+            background-image: linear-gradient(to right, $color-secondary, $color-secondary-bold); 
+            -webkit-background-clip: text;
+            color: transparent;
             padding: .55rem; 
+            font-size: 2rem; 
+            margin-top: .5rem; 
+
         }
+    }
+
+    .card-heading {
+        color: $color-whiter;
+        font-size: 2rem; 
     }
 

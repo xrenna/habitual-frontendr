@@ -104,8 +104,16 @@ body {
   text-transform: uppercase;
   margin-bottom: 1rem; }
   .heading-tertiary--card {
-    background-color: #eee;
-    padding: .55rem; }
+    background-image: linear-gradient(to right, #ffb703, #fd8500);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: .55rem;
+    font-size: 2rem;
+    margin-top: .5rem; }
+
+.card-heading {
+  color: #fff;
+  font-size: 2rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -172,9 +180,9 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  flex: 0 1 18%;
+  flex: 0 1 22%;
   transform-style: preserve-3d;
-  height: 25rem;
+  height: 30rem;
   margin-top: 3rem; }
   .card__heading {
     position: absolute;
@@ -199,7 +207,10 @@ body {
     .card__side--details {
       list-style: none; }
     .card__side--li {
-      font-size: 1.25rem; }
+      font-size: 1.25rem;
+      font-weight: 700; }
+      .card__side--li:not(:last-child) {
+        margin-bottom: 1rem; }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
