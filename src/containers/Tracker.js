@@ -163,7 +163,7 @@ class Tracker extends Component {
 
     render() {
         return (
-            <>
+            <div className='page'>
             <DragDropContext>
             <div className = 'tracker-content'>
                 <nav className = 'sidebar sidebar--goals'>
@@ -189,7 +189,7 @@ class Tracker extends Component {
             <GoalsModal toggle={this.toggleGoalModal} {...this.state.form} display={this.state.goalModal} onChange={this.onChange} onSubmit={this.onSubmit}/>
             <HabitsModal toggle={this.toggleModal} {...this.state.habitForm} display={this.state.modal} onChange={this.habitChange} onSubmit={this.habitSubmit}/>
             </DragDropContext>
-            </>
+            </div>
         )
     }
 }

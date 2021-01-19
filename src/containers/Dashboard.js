@@ -21,13 +21,13 @@ class Dashboard extends Component {
     render() {
         
         return (
-            <>
+            <div className='page'>
             <h1 className='heading-secondary'> Welcome to your dashboard, {this.props.currentUser && this.props.currentUser.username}</h1>
                 <Filters/>
                 <div className='dashboard'>
                         <section className='cards'>{this.renderGoals()}</section>
                 </div>
-            </>
+            </div>
         )
     }
 }

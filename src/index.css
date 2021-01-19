@@ -38,6 +38,12 @@ body {
   padding-top: 0;
   text-align: center; }
 
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 3rem; }
+
 body {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 500;
@@ -484,3 +490,20 @@ body {
 
 .tracker-content {
   display: flex; }
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms linear 150ms; }
+
+.fade-exit {
+  opacity: 1; }
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 350ms linear; }

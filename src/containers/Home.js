@@ -12,9 +12,9 @@ class Home extends Component {
 
     render() {
         return (
-            <>
+            <div className='page'>
             <Header history={this.props.history}/>
-            </>
+            </div>
         )
     } 
 }
