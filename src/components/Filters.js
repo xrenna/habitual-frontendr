@@ -5,12 +5,10 @@ const Filters = (props) => {
 
 
     return(
-        <form>
-            <div>
-                <label>Search: </label>
-                <input type="text" name="search" value={props.search} onChange={props.handleSearchFormChange}></input> 
+        <form className='form form--small'>
+            <div className='form__group'>
+                <input placeholder='Search Goals By Name' className='form__input form__input--small'type="text" name="search" value={props.search} onChange={props.handleSearchFormChange}></input> 
             </div>
-            <input type="submit" value="Submit" />
         </form>
         )
 }

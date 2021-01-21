@@ -1,7 +1,8 @@
 .nav {
     display: flex; 
     justify-content: space-around;
-    padding: 1.5rem;
+    padding: 2rem;
+    padding-bottom: 0; 
 
     animation: slideInBlurredRight 1.2s ease-out;
 

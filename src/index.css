@@ -219,6 +219,10 @@ body {
 .form {
   max-width: 85%;
   padding: 6rem; }
+  .form--small {
+    width: 25%;
+    padding: 1.25rem;
+    display: inline-block; }
   .form__group:not(:last-child) {
     margin-bottom: 2rem; }
   .form__input {
@@ -242,6 +246,9 @@ body {
       border-bottom: 3px solid #fd8500; }
     .form__input::-webkit-input-placeholder {
       color: #333; }
+    .form__input--small {
+      font-size: 1.25rem;
+      padding: 1rem 1.5rem; }
   .form__label {
     font-size: 1.2rem;
     font-weight: 700;
@@ -365,7 +372,8 @@ body {
 .nav {
   display: flex;
   justify-content: space-around;
-  padding: 1.5rem;
+  padding: 2rem;
+  padding-bottom: 0;
   animation: slideInBlurredRight 1.2s ease-out; }
   .nav__link-container {
     display: flex;
