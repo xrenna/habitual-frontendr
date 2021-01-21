@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { deleteHabit } from '../actions/habits'
 import sprite from '../imgs/sprite.svg'
 import ProgressForm from '../components/ProgressForm'
-import { Draggable } from 'react-beautiful-dnd'
+
 
 class HabitsList extends Component {
 
@@ -15,10 +15,8 @@ class HabitsList extends Component {
         return (
             <>
         <button className='btn btn--small u-margin-bottom-small' onClick={() => this.props.openNewHabitModal(this.props.id)}> + </button>
-       { this.props.habits && this.props.habits.map((habit, index) => 
-        <Draggable draggableId={(habit.id).toString()} index={index}>
-                                            {(provided) => (     
-            <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className='habits-card' key={habit.id} >
+       { this.props.habits && this.props.habits.map(habit =>     
+            <div className='habits-card' key={habit.id} >
                <div className='habits-card__title'>
                     <h2>{habit.name}</h2>
                     <h4>{habit.frequency} days/week</h4>
@@ -47,8 +45,7 @@ class HabitsList extends Component {
                         </a>
                     </div>
                 </div>
-            </div>)}
-            </Draggable>
+            </div>
             )
         }
         

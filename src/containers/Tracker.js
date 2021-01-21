@@ -88,17 +88,15 @@ class Tracker extends Component {
      renderHabits = (id) => {
         const habitObj = this.props.currentUser && this.props.currentUser.goals.filter(goal => id === goal.id) 
         const habit = habitObj.map(habit => 
-                                    <Droppable droppableId={(this.state.id).toString()}>
-                                    {(provided) => (
-                                        <section className='habits-card-container' {...provided.droppableProps} ref={provided.innerRef} key={habit.id}>
+                                    
+                                        <section className='habits-card-container' key={habit.id}>
                                             <HabitsList {...habit}
                                                     key={habit.id}
                                                     openNewHabitModal={this.openNewHabitModal} 
                                                     populateHabitForm={this.populateHabitForm}
                                                     />
-                                            {provided.placeholder}
-                                        </section> )}
-                                    </Droppable>
+                                        </section> 
+                                
         )   
 
         return habit; 
@@ -164,7 +162,6 @@ class Tracker extends Component {
     render() {
         return (
             <div className='page'>
-            <DragDropContext>
             <div className = 'tracker-content'>
                 <nav className = 'sidebar sidebar--goals'>
                     <GoalsSidebar openNewGoalModal={this.openNewGoalModal} 
@@ -188,7 +185,6 @@ class Tracker extends Component {
                     </div>
             <GoalsModal toggle={this.toggleGoalModal} {...this.state.form} display={this.state.goalModal} onChange={this.onChange} onSubmit={this.onSubmit}/>
             <HabitsModal toggle={this.toggleModal} {...this.state.habitForm} display={this.state.modal} onChange={this.habitChange} onSubmit={this.habitSubmit}/>
-            </DragDropContext>
             </div>
         )
     }

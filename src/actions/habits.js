@@ -82,33 +82,33 @@ export function deleteHabit(habitId) {
   }
 }
 
-export function updateProgressCount(count, habit) {
+export function updateProgressCount(habit) {
   console.log('am hitting', habit)
-  return dispatch => {
-    return fetch(`${URL}/${habit}`, {
-      credentials: "include",
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(count),
-    })
-    .then(response => response.json())
-    .then(habit => {
-      if (habit.error) {
-        console.log(habit.error)
-      } else if (habit.notice){
-        console.log(habit.notice)
-      } else {
-        dispatch({
-          type: EDIT_HABIT, 
-          habit
-        })
-        dispatch(getCurrentUser())
-      }
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+    return dispatch => {
+      return fetch(`${URL}/${habit}`, {
+        credentials: "include",
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(habit),
+      })
+      .then(response => response.json())
+      .then(habit => {
+        if (habit.error) {
+          console.log(habit.error)
+        } else if (habit.notice){
+          console.log(habit.notice)
+        } else {
+          dispatch({
+            type: EDIT_HABIT, 
+            habit
+          })
+          dispatch(getCurrentUser())
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }
 }
