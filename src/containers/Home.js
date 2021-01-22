@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { getCurrentUser } from '../actions/currentUser'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
-import Loader from 'react-loaders'
 
 class Home extends Component {
 

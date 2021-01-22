@@ -13,7 +13,7 @@ import sprite from '../imgs/sprite.svg'
             return props.goals && props.goals.map(goal => 
                     <li className='side-nav__item' 
                         onClick={() => props.onClick(goal.id)} key={goal.id}>              
-                        <Goals {...goal}/>
+                        <Goals key={goal.id} {...goal}/>
                         <span>
                             <span className='side-nav__icon'>
                                 <a onClick={() => deleteGoal(goal)}>

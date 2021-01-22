@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import GoalsSidebar from './GoalsSidebar'
 import HabitsList from './HabitsList'
 import GoalsModal from '../components/GoalsModal'
@@ -7,7 +7,7 @@ import { getCurrentUser } from '../actions/currentUser'
 import { addGoal, editGoal } from '../actions/goals'
 import { addHabit, editHabit } from '../actions/habits'
 import { connect } from 'react-redux'
-import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+
 
 
 
