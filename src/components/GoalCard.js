@@ -3,7 +3,7 @@ import HabitList from '../components/HabitList'
 function GoalCard (props) {
 
     const renderHabits = () => {
-        return props && props.habits.map(habit => <li className='card__side--li'><HabitList key={habit.id} {...habit}/></li>)
+        return props && props.habits.map(habit => <li className='card__side--li' key={habit.id}><HabitList {...habit}/></li>)
     }
 
     return (
