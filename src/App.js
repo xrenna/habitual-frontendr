@@ -1,6 +1,4 @@
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-import { Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useHistory} from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Home from './containers/Home'
 import Dashboard from './containers/Dashboard'
