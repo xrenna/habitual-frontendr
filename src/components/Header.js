@@ -1,15 +1,4 @@
-import React, { Component } from 'react'
-import { getCurrentUser } from '../actions/currentUser'
-import { connect } from 'react-redux'
-
-
-class Header extends Component {
-
-    onClick = (url) => {
-        this.props.history.push(url)
-    }
-
-    render() {
+const Header = () => {
         return (
             <header className="header">
                 <div className='header__text-box'>
@@ -20,8 +9,7 @@ class Header extends Component {
                 </div>
             </header>
         )
-    }
 }
 
 
-export default connect(null, { getCurrentUser })(Header)
+export default Header
