@@ -1,4 +1,4 @@
-function HabitList (props) {
+const HabitList = (props) => {
     return (
         <>
             {props.name} - progress:{props.progress}

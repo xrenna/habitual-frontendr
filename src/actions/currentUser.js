@@ -3,7 +3,7 @@ import {
     CLEAR_CURRENT_USER
   } from '../actionTypes' 
   
-  export function login(credentials, history) {
+  export const login = (credentials, history) => {
     return dispatch => {
       return fetch("http://localhost:3000/api/v1/login", {
         credentials: "include",
@@ -29,7 +29,7 @@ import {
     }
   }
   
-  export function getCurrentUser() {
+  export const getCurrentUser = () => {
     return dispatch => {
       return fetch("http://localhost:3000/api/v1/get_current_user", {
         credentials: "include",
@@ -53,7 +53,7 @@ import {
     }
   }
   
-  export function logout(history) {
+  export const logout = (history) => {
     return dispatch => {
       return fetch('http://localhost:3000/api/v1/logout', {
         credentials: "include",
@@ -67,7 +67,7 @@ import {
     }
   }
   
-  export function signup(credentials, history) {
+  export const signup = (credentials, history) => {
     return dispatch => {
       return fetch("http://localhost:3000/api/v1/signup", {
         credentials: "include",
