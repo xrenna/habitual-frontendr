@@ -5,17 +5,16 @@ import sprite from '../imgs/sprite.svg'
 import ProgressForm from '../components/ProgressForm'
 
 
-class HabitsList extends Component {
+const HabitsList = (props) => {
 
-    deleteHabit = (habit) => {
-        this.props.deleteHabit(habit.id)
+    const deleteHabit = (habit) => {
+        props.deleteHabit(habit.id)
       }
 
-    render() {
         return (
             <>
-        <button className='btn btn--small u-margin-bottom-small' onClick={() => this.props.openNewHabitModal(this.props.id)}> + </button>
-       { this.props.habits && this.props.habits.map(habit =>     
+        <button className='btn btn--small u-margin-bottom-small' onClick={() => props.openNewHabitModal(props.id)}> + </button>
+       { props.habits && props.habits.map(habit =>     
             <div className='habits-card' key={habit.id} >
                <div className='habits-card__title'>
                     <h2>{habit.name}</h2>
@@ -32,13 +31,13 @@ class HabitsList extends Component {
                         <p>{habit.progress}/{habit.frequency}</p>
                     </div>
                     <div className='habits-card__svgs'>
-                        <a href="#" onClick={() => this.props.populateHabitForm(habit)}>
+                        <a href="#" onClick={() => props.populateHabitForm(habit)}>
                             <svg className="icon--habit">
                                 <use href={sprite + '#icon-edit'} />
                             </svg>
                         </a>
                     
-                        <a href='#' onClick={() => this.deleteHabit(habit)}>
+                        <a href='#' onClick={() => deleteHabit(habit)}>
                             <svg className="icon--habit">
                                 <use href={sprite + '#icon-trash'} />
                             </svg>
@@ -53,6 +52,6 @@ class HabitsList extends Component {
         </>
         )
     }
-}
+
   
   export default connect(null, { deleteHabit })(HabitsList);

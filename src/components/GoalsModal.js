@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 
 
-export default function GoalsModal(props){
+const GoalsModal = (props) =>{
 
     const { register, handleSubmit, errors } = useForm();
 
@@ -31,3 +31,5 @@ export default function GoalsModal(props){
         </div> 
     )
 }
+
+export default GoalsModal

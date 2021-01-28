@@ -1,18 +1,14 @@
-import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { getCurrentUser } from '../actions/currentUser'
 import { connect } from 'react-redux'
 import Logout from '../components/Logout'
 
 
-class NavBar extends Component {
+const NavBar = (props) => {
 
-  
-
-  render() {
     return (
       <nav className='nav'>
-        {this.props.loggedIn ? 
+        {props.loggedIn ? 
             <>
               <NavLink className='nav__link' to="/">Home</NavLink>
               <NavLink className='nav__link' to="/dashboard">Dashboard</NavLink>
@@ -32,7 +28,7 @@ class NavBar extends Component {
       
     )
   }
-}
+
 const mapStateToProps = state => {
     return({
         loggedIn: !!state.currentUser,

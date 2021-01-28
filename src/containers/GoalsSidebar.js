@@ -4,7 +4,8 @@ import { deleteGoal } from '../actions/goals'
 import sprite from '../imgs/sprite.svg'
 
 
- function GoalsSidebar (props) {
+ const GoalsSidebar = (props) => {
+
     const deleteGoal = (goal) => {
         props.deleteGoal(goal.id)
       }
@@ -41,7 +42,7 @@ import sprite from '../imgs/sprite.svg'
                 {renderGoals()}
             </ul>
             <span>
-                <a href="#" onClick={props.openNewGoalModal}>
+                <a href="#center" onClick={props.openNewGoalModal}>
                     <svg className="icon icon--add">
                         <use href={sprite + '#icon-plus'} />
                     </svg>

@@ -1,8 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 
-
-export default function HabitsModal(props){
+const HabitsModal = (props) => {
 
     const { register, handleSubmit, errors } = useForm();
 
@@ -43,3 +42,5 @@ export default function HabitsModal(props){
         </div> 
     )
 }
+
+export default HabitsModal
