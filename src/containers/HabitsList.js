@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteHabit } from '../actions/habits'
 import sprite from '../imgs/sprite.svg'
@@ -31,13 +30,13 @@ const HabitsList = (props) => {
                         <p>{habit.progress}/{habit.frequency}</p>
                     </div>
                     <div className='habits-card__svgs'>
-                        <a href="#" onClick={() => props.populateHabitForm(habit)}>
+                        <a href="#top" onClick={() => props.populateHabitForm(habit)}>
                             <svg className="icon--habit">
                                 <use href={sprite + '#icon-edit'} />
                             </svg>
                         </a>
                     
-                        <a href='#' onClick={() => deleteHabit(habit)}>
+                        <a href='#top' onClick={() => deleteHabit(habit)}>
                             <svg className="icon--habit">
                                 <use href={sprite + '#icon-trash'} />
                             </svg>

@@ -17,14 +17,14 @@ import sprite from '../imgs/sprite.svg'
                         <Goals key={goal.id} {...goal}/>
                         <span>
                             <span className='side-nav__icon'>
-                                <a onClick={() => deleteGoal(goal)}>
+                                <a href='#top' onClick={() => deleteGoal(goal)}>
                                     <svg className="icon icon--trash">
                                         <use href={sprite + '#icon-trash'} />
                                     </svg>
                                 </a>    
                             </span>
                             <span>
-                                <a onClick={() => props.populateForm(goal)}>
+                                <a href='#top' onClick={() => props.populateForm(goal)}>
                                     <svg className="icon icon--edit">
                                         <use href={sprite + '#icon-edit'} />
                                     </svg>

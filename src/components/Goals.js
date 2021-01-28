@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
-
-export default class Goals extends Component {
-    render() {
+const Goals = (props) => {
         return (
             <>
-            {this.props.name}
+            {props.name}
             </>
         )
-    }
 }
+
+export default Goals
