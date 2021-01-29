@@ -83,7 +83,6 @@ export function deleteHabit(habitId) {
 }
 
 export function updateProgressCount(habit) {
-  console.log('am hitting', habit)
     return dispatch => {
       return fetch(`${URL}/${habit}`, {
         credentials: "include",
