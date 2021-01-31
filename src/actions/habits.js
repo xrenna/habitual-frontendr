@@ -9,7 +9,6 @@ import { getCurrentUser } from './currentUser'
 const URL = 'http://localhost:3000/api/v1/habits'
 
 export function addHabit(habit) {
-  console.log(habit)
     return dispatch => {
         return fetch(URL, {
             credentials: "include",

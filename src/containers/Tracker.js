@@ -120,7 +120,6 @@ class Tracker extends Component {
         })}
 
         habitSubmit = () => {
-            // e.preventDefault()
             if (this.state.habitForm.id) {
                 this.props.editHabit(this.state.habitForm)
               } else {
@@ -179,7 +178,7 @@ class Tracker extends Component {
                         <div className='habits-container'>
                             <div className='habits-info'>
                                 <h3 className='heading-secondary'>Welcome to your Habit Tracker, {this.props.currentUser && this.props.currentUser.username}</h3>
-                                <p>Click on your goals on the left side of the page to view your habits. Feel free to add new goals and habits here.</p>
+                                <p className='paragraph'>Click on your goals on the left side of the page to view your habits. Feel free to add new goals and habits here.</p>
                             </div>
                         </div>}
                     </div>

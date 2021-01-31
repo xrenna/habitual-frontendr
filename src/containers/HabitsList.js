@@ -12,7 +12,7 @@ const HabitsList = (props) => {
 
         return (
             <>
-        <button className='btn btn--small u-margin-bottom-small' onClick={() => props.openNewHabitModal(props.id)}> + </button>
+        <button className='btn btn--small u-margin-bottom-small' onClick={() => props.openNewHabitModal(props.id)}> + Add Habit</button>
        { props.habits && props.habits.map(habit =>     
             <div className='habits-card' key={habit.id} >
                <div className='habits-card__title'>

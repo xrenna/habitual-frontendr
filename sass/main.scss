@@ -13,6 +13,7 @@
 @import 'components/icon';
 @import 'components/modal';
 @import 'components/navbar';
+@import 'components/pagefade';
 @import 'components/progressForm';
 @import 'components/sidebar';
 @import 'components/side-nav';
@@ -25,25 +26,7 @@
 @import 'pages/home';
 @import 'pages/tracker';
 
-.fade-appear,
-.fade-enter {
-    opacity: 0;
-    z-index: 1;
-}
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 500ms linear 150ms;
-}
 
-.fade-exit {
-    opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 350ms linear;
-}
 
 
 
