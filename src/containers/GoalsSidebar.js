@@ -1,5 +1,4 @@
 import Goals from '../components/Goals'
-import Button from '../components/Button'
 import { connect } from 'react-redux'
 import { deleteGoal } from '../actions/goals'
 import sprite from '../imgs/sprite.svg'
@@ -32,7 +31,6 @@ import sprite from '../imgs/sprite.svg'
                                 </a>
                             </span>
                         </span>
-                        <Button />
                     </li>
 
                 )
