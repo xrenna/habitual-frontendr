@@ -7,7 +7,7 @@ import {
 
 import { getCurrentUser } from './currentUser'
 
-const URL = 'http://localhost:3000/api/v1/goals'
+const URL = 'https://habitualbackend.herokuapp.com/api/v1/goals'
 
 export function addGoal(name) {
     return dispatch => {

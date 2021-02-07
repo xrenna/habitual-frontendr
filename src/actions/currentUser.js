@@ -2,10 +2,12 @@ import {
     SET_CURRENT_USER,
     CLEAR_CURRENT_USER
   } from '../actionTypes' 
+
+  const url = 'https://habitualbackend.herokuapp.com/api/v1'
   
   export const login = (credentials, history) => {
     return dispatch => {
-      return fetch("http://localhost:3000/api/v1/login", {
+      return fetch(`${url}/login`, {
         credentials: "include",
         method: "POST",
         headers: {
@@ -31,7 +33,7 @@ import {
   
   export const getCurrentUser = () => {
     return dispatch => {
-      return fetch("http://localhost:3000/api/v1/get_current_user", {
+      return fetch(`${url}/get_current_user`, {
         credentials: "include",
         method: "GET",
         headers: {
@@ -55,7 +57,7 @@ import {
   
   export const logout = (history) => {
     return dispatch => {
-      return fetch('http://localhost:3000/api/v1/logout', {
+      return fetch(`${url}/logout`, {
         credentials: "include",
         method: "DELETE"
       })
@@ -69,7 +71,7 @@ import {
   
   export const signup = (credentials, history) => {
     return dispatch => {
-      return fetch("http://localhost:3000/api/v1/signup", {
+      return fetch(`${url}/signup`, {
         credentials: "include",
         method: "POST",
         headers: {

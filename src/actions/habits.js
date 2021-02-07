@@ -6,7 +6,7 @@ import {
 
 import { getCurrentUser } from './currentUser'
 
-const URL = 'http://localhost:3000/api/v1/habits'
+const URL = 'https://habitualbackend.herokuapp.com/api/v1/habits'
 
 export function addHabit(habit) {
     return dispatch => {
