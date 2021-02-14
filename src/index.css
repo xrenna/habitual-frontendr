@@ -449,6 +449,21 @@ body {
   .side-nav__icon {
     float: right; }
 
+.features {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 4rem;
+  justify-content: center; }
+  .features__card {
+    height: 30vh;
+    display: grid;
+    justify-items: center;
+    align-items: center; }
+  .features__icon {
+    height: 4.25rem;
+    width: 4.25rem; }
+
 .habits-container {
   flex: 1;
   display: flex;
