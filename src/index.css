@@ -453,16 +453,20 @@ body {
   padding: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 4rem;
+  gap: 5rem;
   justify-content: center; }
   .features__card {
     height: 30vh;
     display: grid;
+    gap: 2rem;
     justify-items: center;
     align-items: center; }
   .features__icon {
     height: 4.25rem;
     width: 4.25rem; }
+  .features__text {
+    font-size: 1.75rem;
+    color: #333; }
 
 .habits-container {
   flex: 1;
