@@ -8,18 +8,31 @@
     &__card{
         height: 30vh;
         display: grid; 
-        gap: 2rem;
+        gap: 1rem;
         justify-items: center;
         align-items: center;
     }
 
     &__icon{
-        height: 4.25rem;
-        width: 4.25rem;
+        height: 6.25rem;
+        width: 6.25rem;
     }
 
     &__text{
         font-size: 1.75rem;
         color: $color-gray-dark-2;
+        display: grid; 
+        gap: 1.5rem;
+        align-items: center; 
+        justify-items: center;
+
+        &::before,
+        &::after{
+            content: "";
+            height: 1px; 
+            width: 75%;
+            display: block; 
+            background-color: currentColor;
+        }
     }
 }
