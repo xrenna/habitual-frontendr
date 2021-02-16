@@ -450,20 +450,25 @@ body {
     float: right; }
 
 .features {
-  padding: 5rem;
+  padding: 10rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 5rem;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 25rem;
+  background-image: linear-gradient(to right bottom, rgba(88, 180, 209, 0.8), rgba(2, 48, 71, 0.8)); }
   .features__card {
-    height: 30vh;
+    height: 40vh;
+    border-radius: .5rem;
     display: grid;
-    gap: 1rem;
     justify-items: center;
-    align-items: center; }
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.3); }
   .features__icon {
     height: 6.25rem;
-    width: 6.25rem; }
+    width: 6.25rem;
+    fill: #126782; }
   .features__text {
     font-size: 1.75rem;
     color: #333;

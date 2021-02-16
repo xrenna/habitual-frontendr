@@ -1,21 +1,28 @@
 .features {
-    padding: 5rem; 
+    padding: 10rem; 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 5rem;
     justify-content: center;
+    margin-top: 25rem;
+    background-image: linear-gradient(to right bottom, 
+                                    rgba($color-primary, 0.8), 
+                                    rgba($color-primary-dark-3, 0.8));;
 
     &__card{
-        height: 30vh;
+        height: 40vh;
+        border-radius: .5rem;
         display: grid; 
-        gap: 1rem;
         justify-items: center;
         align-items: center;
+        background-color: $color-gray-light-2;
+        box-shadow: 0 1rem 2rem rgba($color-black, .30);
     }
 
     &__icon{
         height: 6.25rem;
         width: 6.25rem;
+        fill: $color-primary-dark-2
     }
 
     &__text{
