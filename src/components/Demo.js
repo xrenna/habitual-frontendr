@@ -14,6 +14,10 @@ const Demo = () => {
                     Implemented Sass as a CSS precompiler to efficiently design the UX.
                 </p>
             </div>
+            <div className='demo__box'>
+                Will hold the dif of the demo eventually 
+            </div>
+            <button>Try it out now</button>
         </section>
     )
 }
