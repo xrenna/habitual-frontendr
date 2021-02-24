@@ -449,6 +449,11 @@ body {
   .side-nav__icon {
     float: right; }
 
+.demo {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw); }
+
 .features {
   padding: 10rem;
   display: grid;

@@ -17,7 +17,7 @@ const Demo = () => {
             <div className='demo__box'>
                 Will hold the dif of the demo eventually 
             </div>
-            <button>Try it out now</button>
+            <button className='btn'>Try it out now</button>
         </section>
     )
 }
