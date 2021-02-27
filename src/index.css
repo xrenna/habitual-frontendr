@@ -453,13 +453,30 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 6vw);
-  gap: 1.5rem; }
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center; }
+  .demo__header {
+    grid-column: 1 / span 2; }
   .demo__description {
     grid-column: 1 / span 2;
+    grid-row: 2 / -1;
+    height: 60vh;
     display: grid;
-    grid-template-rows: repeat(3, 1fr); }
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center; }
     .demo__description text--1 {
       grid-row: 1 / span 2; }
+  .demo__box {
+    background-color: #eee;
+    height: 30rem;
+    width: 50rem;
+    grid-column: 4 / span 4;
+    grid-row: 1 / span 4; }
+  .demo__btn {
+    grid-column: 5 / span 2;
+    grid-row: 6 / 7; }
 
 .features {
   padding: 10rem;
