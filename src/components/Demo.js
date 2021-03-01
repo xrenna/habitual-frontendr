@@ -3,7 +3,7 @@ import React from 'react'
 const Demo = () => {
     return (
         <section className='demo'>
-            <h3 className='demo__header'>About Habitual</h3>
+            <h3 className='demo__header heading-tertiary'>About Habitual</h3>
             <div className='demo__description'>
                 <p className='text text--1'>
                     Habitual is a habit tracker SPA that allows users to track their progress, set frequency by week, and manage their goals for personal growth.
