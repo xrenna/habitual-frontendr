@@ -9,7 +9,7 @@ const Demo = () => {
                     Habitual is a habit tracker SPA that allows users to track their progress, set frequency by week, and manage their goals for personal growth.
                 </p>
                 <p className='text text--2'>
-                    Engineered the UI using React.js and Redux to manage the state of application & used Redux and Thunk middleware to retrieve data and implement data persistence.
+                    Engineered the UI using React.js and Redux to manage the state of application & used Redux and Thunk middleware to retrieve data and implement data persistence to a RoR backend.
                 </p>
                 <p className='text text--3'>
                     Implemented Sass as a CSS precompiler to efficiently design the UX.
